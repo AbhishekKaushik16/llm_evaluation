@@ -151,14 +151,14 @@ All numbers below come from this run, against `Qwen/Qwen2.5-3B-Instruct` served 
 
 ### Part B — Evaluation (generation-based MC)
 
-| Task | Strategy | Accuracy | n_samples | n_parseable | n_errors |
-|---|---|---:|---:|---:|---:|
-| `mmlu` (partial) | gen-eval, exact-match-letter | **0.617** | 2,500 / 14,042 | 99.4% | 14 |
-| `hellaswag` | — | n/a | — | — | — |
-| `custom_commonsense` | gen-eval, exact-match-letter | **1.000** | 50 / 50 | 100% | 0 |
+| Task | Strategy | Accuracy | n_samples | n_parseable | n_errors | Wall clock |
+|---|---|---:|---:|---:|---:|---:|
+| `mmlu` (full) | gen-eval, exact-match-letter | **0.6556** | 14,042 / 14,042 | 99.99% | 0 | 34 min |
+| `hellaswag` | — | n/a | — | — | — | — |
+| `custom_commonsense` | gen-eval, exact-match-letter | **1.000** | 50 / 50 | 100% | 0 | <1 min |
 
-- MMLU is reported on a 2,500-sample partial run (interrupted under deadline). The number is statistically stable to ~±1% and matches published Qwen2.5-3B-Instruct MMLU (~62%) within the gen-vs-loglikelihood gap.
-- HellaSwag is omitted from the generation-based path because its choices are full-sentence completions, not letter answers — no clean reformulation exists. Loglikelihood scoring would be required and was not produced this run (see "Note on `vllm-metal` and logprobs" above).
+- MMLU is the **full 14,042-sample test** (no LIMIT). Accuracy 65.56%, 0 errors, 6.8 req/s sustained on the metal server. The number sits ~0pp above Qwen2.5-3B-Instruct's published MMLU (~65.6%), validating that the generation-based MC path tracks the canonical loglikelihood metric closely on this benchmark — at least for instruct-tuned models that emit single-letter answers reliably.
+- HellaSwag is omitted from the generation-based path because its choices are full-sentence completions, not letter answers — no clean reformulation exists. Loglikelihood scoring would be required and is blocked by the `vllm-metal` 0.2.0 logprobs bug (see note above). The CPU server profile (`make serve-cpu`) does compute logprobs cleanly but proved too slow / connection-flaky for a full HellaSwag run; this is the one explicit-brief gap in the submission.
 - `custom_commonsense` is a 50-question hand-built benchmark (`eval_runner/custom_task/`); 100% accuracy reflects the questions being well within the model's competence rather than benchmark difficulty.
 
 ### Part C — Performance & Scaling
@@ -183,27 +183,26 @@ At concurrency=16 with double-newline stops the server sustains ~270 tok/s aggre
 
 ### Part E — Benchmark Improvement (ARC-Challenge)
 
-`make improve LIMIT=100` results (95% bootstrap CI, n=1000 resamples):
+**Full test (*n*=1,172, greedy decoding)** — primary result (`improve/results/results_baseline.json`, `results_few_shot.json`):
 
-| Strategy | Accuracy | 95% CI | Δ vs baseline |
-|---|---:|---|---:|
-| Baseline (zero-shot) | **80.0%** | [72.0, 88.0] | — |
-| + Instruction prompt | 79.0% | [71.0, 87.0] | −1.0 |
-| + Few-shot (k=3, FAISS-retrieved) | **81.0%** | [73.0, 88.0] | **+1.0** |
-| + Chain-of-thought | 79.0% | [71.0, 86.0] | −1.0 |
-| Combined (instruct + few-shot + CoT, greedy) | 80.0% | [72.0, 88.0] | 0.0 |
-| Combined + SC (k=5, T=0.7) | 80.0% | [72.0, 87.0] | 0.0 |
+| Strategy | Accuracy | 95% CI | Δ vs baseline | McNemar *p* (vs baseline) |
+|---|---:|---|---:|---:|
+| Baseline (zero-shot) | **81.74%** | [79.78, 83.79] | — | — |
+| + Few-shot (k=3 train demos, FAISS cosine) | **81.57%** | [79.35, 83.79] | **−0.17 pp** | **0.91** |
 
-No technique — including self-consistency, the most expensive and most-likely-to-win experiment in the suite — cleared the **+2.5 pp** assignment target on this 100-question slice. All CIs overlap heavily — at n=100 the SE on accuracy is ~4 pp, so true lifts under ~8 pp aren't reliably detectable. The first 100 questions of ARC-Challenge skew toward easier elementary-grade items, leaving little headroom on a strong 80% baseline. To draw a defensible conclusion we'd need the full 1,172-question test set (CI shrinks to ±~2 pp) and the combined+SC pass to complete (~30–60 min on the metal server). Full discussion, technique descriptions, cost trade-offs, and before/after examples live in `improve/report.md` and `improve/results/before_after_examples.md`.
+**Headline:** few-shot ICL is **not significantly different** from zero-shot on the full ARC test; the +2.5 pp assignment target is **not met**.
+
+**Same 500 question IDs:** baseline subset **82.40%**, few-shot greedy **83.40%**, few-shot + self-consistency (*k*=3) **83.40%** (417/500 each for greedy vs SC). SC did **not** move the aggregate versus greedy few-shot; McNemar greedy vs SC *p*=0.62 (*b*=2, *c*=2).
+
+Earlier `LIMIT=100` ablations were exploratory only and are summarized in `improve/report.md`; the committed JSONs focus on the full-test / same-500-ID results.
 
 ## Final Summary — Best Improvement and Lessons Learned
 
-The hypothesis going in was that a 3B instruct model on school-science questions would benefit more from *examples* than from *instruction*. That held: the only technique with a positive point estimate was **FAISS-retrieved few-shot prompting** — embed all 1,119 ARC train questions with `all-MiniLM-L6-v2`, build a cosine-similarity FAISS index, and at inference time pull the top-3 nearest train questions as in-context demonstrations. No manual example curation. That moved accuracy from 80.0% to 81.0% (+1.0 pp). Instruction prompting (−1.0 pp), chain-of-thought (−1.0 pp), combined-greedy (0.0 pp), and combined + self-consistency (k=5, T=0.7, also 0.0 pp) did not help on this slice. SC is the cleanest data point in the table: at ~15× the baseline cost it should have averaged out stylistic disagreements between the stacked techniques, and the fact that it landed at exactly 80.0% confirms the techniques don't disagree productively — there was no underlying lift for variance reduction to recover.
+The headline quantitative result is the **full ARC-Challenge test (*n*=1,172)**: baseline **81.74%**, FAISS few-shot **81.57%**, McNemar *p*=0.91 — **no lift**. On the **same 500 questions**, few-shot + SC (*k*=3) matched greedy few-shot (**83.40%**, 417/500). The earlier *n*=100 slice had suggested +1.0 pp for few-shot; **full-test evaluation overrides that.**
 
-What I'd take away if I were doing this again:
+For the short narrative version (submission checklist item), see [`FINAL_SUMMARY.md`](FINAL_SUMMARY.md). Lessons that survived contact with the full test:
 
-1. **Infrastructure shapes the experiment more than prompt engineering does.** The single biggest time sink was a `vllm-metal 0.2.0` bug that hardcodes `logprobs=None` in every `ModelRunnerOutput`, breaking the standard lm-eval log-likelihood scoring path. The workaround — a generation-based MC scorer that asks the model for a single answer letter and exact-matches it — is correct and reproducible, but it's not the canonical metric. Lesson: when the eval harness assumes a capability your serving stack doesn't have, you need a parallel non-likelihood path ready, or you don't get to evaluate.
-2. **Sample-size budgeting beats prompt cleverness at small n.** At n=100, the 95% CI on accuracy is ~±8 pp; the assignment's +2.5 pp target needs n≥400 (α=0.05, 80% power) to be detectable. I underestimated this. Every Δ in the table is directionally interpretable, not statistically defensible. Pick n from the target effect size *before* designing the prompt sweep.
-3. **Strong instruct baselines leave little headroom on easy slices.** Qwen2.5-3B-Instruct sits at 80% zero-shot on the first 100 ARC questions because they skew elementary-grade. A stratified slice across the grade band would have been the right thing to evaluate against.
-4. **Chain-of-thought can hurt regex-scored multiple choice** — not because reasoning got worse, but because verbose outputs occasionally drift off the strict letter-answer format and get mis-extracted. The answer parser is part of the evaluation system and needs its own test coverage.
-5. **Compose carefully — and SC isn't a free fix.** Stacking instruct + few-shot + CoT returned exactly to baseline; the techniques partially cancel because each pulls the model toward a different output style. Self-consistency on top of the combined prompt at k=5 (T=0.7) — the principled variance-reduction fix — also landed at 80.0%. SC works as advertised when the underlying samples disagree productively; here they didn't, so there was nothing for majority voting to recover. The bottleneck is sample size and slice composition, not technique choice.
+1. **Infrastructure vs prompts.** When `vllm-metal` breaks logprobs, you either fix the server stack or adopt a parallel scoring path (`gen_mc_eval.py`) — engineering dominates headline metrics.
+2. **Slice ≠ benchmark.** Do not ship quantitative claims from a prefix slice when the full test fits on disk.
+3. **Long jobs need power.** Battery drain / sleep stops everything mid-request — plug in for full benchmark runs.
+

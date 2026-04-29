@@ -1,16 +1,16 @@
 {
   "task": "mmlu",
   "model": "Qwen/Qwen2.5-3B-Instruct",
-  "timestamp": "20260429_203100",
+  "timestamp": "20260429_223749",
   "results": {
     "mmlu": {
-      "acc,none": 0.617,
-      "acc_norm,none": 0.617,
-      "n_samples": 2500,
-      "n_correct": 1542,
-      "n_parseable": 2486,
-      "n_errors": 14,
-      "elapsed_seconds": 533.0
+      "acc,none": 0.6556046147272468,
+      "acc_norm,none": 0.6556046147272468,
+      "n_samples": 14042,
+      "n_correct": 9206,
+      "n_parseable": 14041,
+      "n_errors": 0,
+      "elapsed_seconds": 2055.2063121795654
     }
   },
   "versions": {
@@ -21,7 +21,6 @@
   },
   "config": {
     "strategy": "generation",
-    "scoring": "exact-match-letter",
-    "note": "Partial run (2500 / 14042 samples). Run was interrupted by user under deadline pressure. The 2500-sample slice is statistically reliable to ~+/-1% and matches published Qwen2.5-3B-Instruct MMLU (~62%)."
+    "scoring": "exact-match-letter"
   }
 }

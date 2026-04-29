@@ -19,6 +19,9 @@ from collections import Counter
 from pathlib import Path
 
 import aiohttp
+from aiohttp import ClientResponseError
+from aiohttp.client_exceptions import ClientError, ServerDisconnectedError
+
 import numpy as np
 from scipy import stats
 from tqdm import tqdm
@@ -51,10 +54,22 @@ async def call_completion(
     if seed is not None:
         payload["seed"] = seed
 
-    async with session.post(url, json=payload) as resp:
-        resp.raise_for_status()
-        data = await resp.json()
-        return data["choices"][0]["text"]
+    # Transient disconnects under load are common on long runs; retry before failing.
+    last_err: BaseException | None = None
+    for attempt in range(5):
+        try:
+            async with session.post(url, json=payload) as resp:
+                resp.raise_for_status()
+                data = await resp.json()
+                return data["choices"][0]["text"]
+        except (ServerDisconnectedError, ClientError, ClientResponseError, asyncio.TimeoutError) as e:
+            last_err = e
+            if attempt < 4:
+                await asyncio.sleep(1.0 * (2**attempt))
+                continue
+            raise
+    assert last_err is not None
+    raise last_err
 
 
 async def run_inference(
@@ -75,40 +90,54 @@ async def run_inference(
     async with aiohttp.ClientSession(timeout=timeout) as session:
         async def process_one(item: dict) -> dict:
             async with semaphore:
-                answers = []
-                raw_outputs = []
+                try:
+                    answers = []
+                    raw_outputs = []
 
-                for k_idx in range(self_consistency_k):
-                    t = temperature if self_consistency_k > 1 else 0.0
-                    s = (seed + k_idx) if seed is not None else None
+                    for k_idx in range(self_consistency_k):
+                        t = temperature if self_consistency_k > 1 else 0.0
+                        s = (seed + k_idx) if seed is not None else None
 
-                    output = await call_completion(
-                        session, url, model, item["prompt"],
-                        max_tokens, t, s,
-                    )
-                    raw_outputs.append(output)
-                    ans = normalize_answer(output)
-                    if ans:
-                        answers.append(ans)
+                        output = await call_completion(
+                            session, url, model, item["prompt"],
+                            max_tokens, t, s,
+                        )
+                        raw_outputs.append(output)
+                        ans = normalize_answer(output)
+                        if ans:
+                            answers.append(ans)
 
-                if self_consistency_k > 1 and answers:
-                    # Majority vote
-                    counter = Counter(answers)
-                    final_answer = counter.most_common(1)[0][0]
-                else:
-                    final_answer = answers[0] if answers else None
+                    if self_consistency_k > 1 and answers:
+                        # Majority vote
+                        counter = Counter(answers)
+                        final_answer = counter.most_common(1)[0][0]
+                    else:
+                        final_answer = answers[0] if answers else None
 
-                return {
-                    "id": item["id"],
-                    "answerKey": item["answerKey"],
-                    "predicted": final_answer,
-                    "raw_outputs": raw_outputs,
-                    "all_answers": answers,
-                    "correct": final_answer == item["answerKey"],
-                    "strategy": item["strategy"],
-                }
+                    return {
+                        "id": item["id"],
+                        "answerKey": item["answerKey"],
+                        "predicted": final_answer,
+                        "raw_outputs": raw_outputs,
+                        "all_answers": answers,
+                        "correct": final_answer == item["answerKey"],
+                        "strategy": item["strategy"],
+                    }
+                except Exception as e:
+                    # Never raise out of a task: one disconnect must not abort the whole batch
+                    # (that would exit async with session early and cascade Session is closed).
+                    return {
+                        "id": item["id"],
+                        "answerKey": item["answerKey"],
+                        "predicted": None,
+                        "raw_outputs": [f"[client error after retries] {type(e).__name__}: {e}"],
+                        "all_answers": [],
+                        "correct": False,
+                        "strategy": item["strategy"],
+                        "error": repr(e),
+                    }
 
-        tasks = [process_one(item) for item in prompts]
+        tasks = [asyncio.create_task(process_one(item)) for item in prompts]
 
         for coro in tqdm(
             asyncio.as_completed(tasks),
@@ -251,7 +280,10 @@ async def main() -> None:
         if args.limit is not None:
             prompts = prompts[: args.limit]
 
-        sc_k = args.self_consistency_k if strategy_name == "combined" else 1
+        # Respect --self-consistency-k for any strategy (e.g. few_shot + SC).
+        # `make improve` / eval.sh use defaults (k=1) for the greedy sweep, then
+        # invoke combined + SC in a second pass with k>1.
+        sc_k = args.self_consistency_k
         temp = args.sc_temperature if sc_k > 1 else 0.0
 
         print(f"\n{'='*60}")
@@ -277,8 +309,8 @@ async def main() -> None:
               f"[{accuracy['ci_low']:.2f}%, {accuracy['ci_high']:.2f}%] "
               f"({accuracy['n_correct']}/{accuracy['n']})")
 
-        # Save detailed results
-        results_file = RESULTS_DIR / f"results_{strategy_name}.json"
+        suffix = f"_sc{sc_k}" if sc_k > 1 else ""
+        results_file = RESULTS_DIR / f"results_{strategy_name}{suffix}.json"
         with open(results_file, "w") as f:
             json.dump({
                 "strategy": strategy_name,

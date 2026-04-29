@@ -9,37 +9,42 @@ Improve ARC-Challenge accuracy by at least +2.5 points using only inference-time
 - **Model**: `Qwen/Qwen2.5-3B-Instruct`
 - **Serving**: vLLM (`vllm-metal` 0.2.0) with continuous batching, paged attention, prefix caching, seed=42
 - **Hardware**: Apple Silicon (MacBook, M-series)
-- **Run scope**: First 100 questions of ARC-Challenge test (`LIMIT=100`). The full test set is 1,172 questions; this run was capped due to a deadline. Wider CIs are a direct consequence of the smaller n.
+- **Run scope**: Full ARC-Challenge **test** split (1,172 questions) for baseline vs FAISS few-shot (greedy). Earlier exploratory runs used `LIMIT=100` (wide CIs) and are summarized below without keeping all intermediate JSON files.
 
-## Baseline vs Improved Results
+## Baseline vs Improved Results (full test, n=1,172)
 
-All numbers from `improve/results/results_*.json`. Confidence intervals are non-parametric bootstrap (n=1000 resamples) on the same 100-question slice.
+Numbers from `improve/results/results_baseline.json` and `improve/results/results_few_shot.json`. Confidence intervals are bootstrap (n=1000 resamples). Paired comparison uses McNemar’s test on per-question correctness.
 
-| Strategy | Accuracy | 95% CI | Lift vs Baseline | p-value | Significant? |
-|----------|---------:|--------|-----------------:|--------:|:------------:|
-| Baseline (zero-shot) | **80.0%** | [72.0%, 88.0%] | — | — | — |
-| + Instruction prompt | 79.0% | [71.0%, 87.0%] | **−1.0** | 1.000 | no |
-| + Few-shot (k=3, FAISS-retrieved) | **81.0%** | [73.0%, 88.0%] | **+1.0** | 1.000 | no |
-| + Chain-of-thought | 79.0% | [71.0%, 86.0%] | **−1.0** | 1.000 | no |
-| Combined (instruct + few-shot + CoT, greedy) | 80.0% | [72.0%, 88.0%] | **0.0** | 0.773 | no |
-| Combined + SC (k=5, T=0.7) | 80.0% | [72.0%, 87.0%] | **0.0** | — | no |
+| Strategy | Accuracy | 95% CI | Δ vs baseline | McNemar *p* |
+|----------|---------:|--------|--------------:|------------:|
+| Baseline (zero-shot) | **81.74%** | [79.78%, 83.79%] | — | — |
+| + Few-shot (k=3 train demos, FAISS cosine) | **81.57%** | [79.35%, 83.79%] | **−0.17 pp** | **0.91** |
 
-**None of the strategies — including self-consistency, the most expensive and most-likely-to-win experiment — achieved the +2.5 point target on this 100-question slice.** All CIs overlap heavily; at n=100 the standard error on accuracy is ~4 pp, so detecting a true lift of <8 pp is unreliable. The gen-eval signal is dominated by sampling noise at this n. Self-consistency at k=5 (T=0.7) — the variance-reduction technique that *should* have moved the combined number — landed at exactly 80.0%, identical to baseline. That's the strongest piece of evidence in the table that the bottleneck is sample size and slice composition, not technique choice.
+McNemar contingency: 38 questions where baseline wrong & few-shot right; 40 where baseline right & few-shot wrong (*b*=38, *c*=40). **No significant lift** — few-shot is essentially tied with zero-shot on the full test.
+
+**None of these approaches reached the assignment’s +2.5 pp ARC target.** On the full test the headline story changes versus the small-*n* slice: the first-100-question window had looked like +1.0 pp for few-shot; at *n*=1,172 that signal disappears into noise.
+
+### Earlier ablation (n=100, greedy)
+
+The first-pass ablation covered instruction prompting, CoT, combined prompting, and combined+SC on a 100-question cap. Those rows are **exploratory only** (±~8 pp CIs), so the committed results focus on the full-test baseline/few-shot comparison and the same-500-ID SC comparison.
+
+### Merged 500-question subset — few-shot vs few-shot + SC (*k*=3)
+
+Completed (`results_few_shot_sc3.json`, ~36 min). On the **same 500 IDs** as this run:
+
+| Strategy | Accuracy | Correct |
+|---|---:|---:|
+| Baseline (subset) | 82.40% | 412 / 500 |
+| Few-shot greedy | **83.40%** | 417 / 500 |
+| Few-shot + SC (*k*=3, *T*=0.7) | **83.40%** | 417 / 500 |
+
+McNemar baseline vs SC *p*=0.52; greedy few-shot vs SC *p*=0.62 (*b*=2, *c*=2). **Self-consistency did not change aggregate accuracy** versus greedy few-shot — identical 417 / 500.
 
 ## Honest Take
 
-The baseline at 80% is unusually strong on this slice — the first 100 questions of ARC-Challenge skew toward easier elementary-school items (the test set is roughly ordered by source grade). The model handles those well even zero-shot, leaving little headroom for prompt-engineering lifts to be visible on a small slice.
-
-To validate the techniques fairly we'd need:
-1. The full 1,172-question test set (CI shrinks to ±~2 pp).
-2. The combined+SC pass to complete (k=5 sampling typically reduces variance and produces the cleanest aggregate score).
-3. A stratified slice mixing easier and harder grade bands.
-
-What we *can* say from this data:
-- The pipeline runs end-to-end on the metal server with concurrency=8 and no errors.
-- Few-shot retrieval via FAISS over the train set produced the best point estimate (+1.0 pp) — directionally consistent with literature.
-- Instruction prompting and CoT did not help; on a strong instruct-tuned 3B model, additional task framing or "let's think step by step" can hurt by inducing verbose outputs that the regex parser sometimes mis-extracts.
-- The combined strategy returned to baseline accuracy, suggesting the techniques compose without interference but also without additive lift on this slice.
+- **Full test > slice.** A convenient prefix of the ARC test set is not a surrogate for the full benchmark — ordering by grade makes early questions easier; small *n* inflates CI width.
+- **Few-shot here did not beat baseline at scale.** Retrieval-augmented ICL is still the most principled lever we tried, but on Qwen2.5-3B-Instruct at greedy decoding it neither helps nor hurts meaningfully on the full 1,172-question test.
+- **Self-consistency completed on 500 prompts** and matched greedy few-shot exactly at **417 / 500** — variance reduction without net lift (paired disagreements canceled).
 
 ## Techniques Applied
 
@@ -78,32 +83,26 @@ Self-consistency is significantly more expensive but typically the largest varia
 - **Self-consistency**: temperature=0.7, top_p=0.95, k=5, fixed seed sequence per question
 - **Greedy strategies**: temperature=0.0, top_p=1.0
 - **FAISS index**: cosine similarity via inner product on L2-normalized vectors
-- **Run command**: `make improve LIMIT=100`. Drop `LIMIT=...` for the full 1,172-question test.
+- **Run command (full test, greedy baseline + few-shot):** run `python improve/infer.py --strategy baseline` then `python improve/infer.py --strategy few_shot` with server up. For the 500-question SC leg, run `python improve/infer.py --strategy few_shot --self-consistency-k 3 --sc-temperature 0.7 --limit 500`.
 
 ## Statistical Validity
 
-- Bootstrap CIs (n=1000 resamples) reported per strategy.
-- McNemar's test for paired comparisons was not run for this report — at n=100 with the observed deltas it would be underpowered.
-- For the assignment's +2.5 pp target, n≥400 is needed to detect that effect at α=0.05 with 80% power; the full ARC-Challenge test (n=1,172) would suffice.
+- Bootstrap CIs (n=1000 resamples) reported per strategy on the full test.
+- McNemar’s test for paired baseline vs few-shot on *n*=1,172: *p*=0.91 — **no significant difference**.
+- The exploratory *n*=100 ablations remain useful for qualitative comparisons (instruction vs CoT vs combined) but should not drive quantitative claims.
 
 ## Before/After Examples
 
-See `improve/results/before_after_examples.md` for question-level diffs. The pipeline writes 10+ side-by-side comparisons showing where techniques changed the model's answer (right or wrong) vs baseline.
+See `improve/results/before_after_examples.md` for question-level diffs from the earlier pipeline run (`LIMIT=100`). Those comparisons pair baseline vs **combined**, not few-shot; regenerate after choosing a primary “improved” strategy if needed.
 
 ## Final Summary — The Story and What I Learned
 
-**The story of the best improvement.** The hypothesis was that a 3B instruct model on a school-science benchmark would benefit most from *examples*, not from *instruction*. The winning technique was FAISS-retrieved few-shot prompting: I embedded all 1,119 ARC-Challenge train questions with `all-MiniLM-L6-v2` (384-dim sentence-transformer), built an inner-product FAISS index over L2-normalized vectors (cosine similarity), and at inference time pulled the top-3 most semantically similar train questions as in-context demonstrations. No manual example curation, no per-question tuning — same retrieval pipeline for every test item. That moved accuracy from 80.0% baseline to 81.0% (+1.0 pp), the only technique with a positive point estimate on this slice. Instruction prompting and CoT both came in at 79.0% (−1.0 pp), and the combined strategy returned to 80.0%. Self-consistency on top of combined (k=5, T=0.7) — the most expensive and most-likely-to-win experiment in the suite — also landed at exactly 80.0%. So few-shot retrieval was the only single lever that pulled the right way, and even the variance-reduction technique that should have rescued the combined strategy didn't move the needle.
+**What held up on the full ARC-Challenge test (*n*=1,172).** Zero-shot baseline landed at **81.74%** [79.78, 83.79]. FAISS-retrieved few-shot (three train demos selected by cosine similarity over `all-MiniLM-L6-v2` embeddings) landed at **81.57%** [79.35, 83.79] — a **−0.17 pp** delta with McNemar *p*=0.91. So the small-*n* slice had overstated a few-shot gain; at scale, **few-shot does not beat baseline** under greedy decoding.
 
 **What I learned.**
 
-1. **Infrastructure shapes the experiment more than prompt cleverness does.** I lost the largest chunk of the day to a `vllm-metal 0.2.0` bug that hardcodes `logprobs=None` in every `ModelRunnerOutput`, breaking lm-eval's log-likelihood scoring path. Workaround: a generation-based MC scorer (`gen_mc_eval.py`) that asks the model to emit a single answer letter and exact-matches it. The CPU-vLLM fallback (`make serve-cpu` via `VLLM_PLUGINS=""`) does compute logprobs cleanly — verified by direct probe — but proved too slow / connection-flaky under sustained eval traffic to ship canonical numbers in the deadline. That's the real "lesson learned" of the day: when the eval harness assumes a capability your serving stack doesn't have, you need a parallel non-likelihood path ready, or you don't get to evaluate.
+1. **Infrastructure still dominates wall-clock.** The `vllm-metal` logprobs gap forced a generation-based MC path for lm-eval; that remains the central engineering constraint.
+2. **Pick *n* before trusting deltas.** A 100-question prefix is not the full benchmark — ordering effects and CI width make it misleading.
+3. **Battery / sleep kills long jobs.** Plug in power for multi-hour evals; `infer.py` retries HTTP failures and isolates per-item errors.
 
-2. **Sample-size budgeting beats prompt engineering at small n.** At n=100 the standard error on accuracy is ~4 pp and the 95% CI is ~±8 pp. An honest +2.5 pp target needs n≥400 to be detectable (α=0.05, 80% power). I underestimated this and ran with `LIMIT=100` to fit the deadline. The result is a report where every Δ is statistically indistinguishable from zero — directionally interpretable, not statistically defensible. Next time: pick n from the target effect size before designing the prompt sweep.
-
-3. **Strong instruct-tuned baselines leave little headroom on easy slices.** The first 100 ARC-Challenge questions skew toward elementary-grade items (the test set is loosely ordered by source grade), and Qwen2.5-3B-Instruct already sits at 80% on them zero-shot. There is almost nothing left for a prompt to fix. A stratified slice across the grade band would have been the right thing to evaluate against.
-
-4. **Chain-of-thought can hurt regex-scored multiple choice.** CoT moved accuracy down 1 pp, not because the model reasoned worse, but because verbose outputs occasionally drifted off the strict letter-answer format and got mis-extracted. On a real evaluation pipeline, the answer parser is part of the evaluation system and needs its own test coverage. I added five fallback patterns (direct letter, "The answer is X", letter with punctuation, last letter mention) and that was still not enough on every CoT trace.
-
-5. **Compose carefully — combined ≠ sum of parts, and SC doesn't always rescue it.** Stacking instruction + few-shot + CoT returned exactly to baseline (80.0%). Each technique pulls the model toward a different output style, and they partially cancel. Self-consistency (k=5 majority voting on top of the combined prompt, T=0.7) is the principled fix for that — it should average out the stylistic noise — and at ~13 minutes wall-clock for n=100 it cost ~15× the baseline. It also returned 80.0%. The clean read of that result: SC successfully reduced stochastic sampling variance, but there was no underlying lift to recover. The techniques don't disagree productively on this slice, so a majority vote ratifies the same answer the greedy run already produced. The bottleneck is the slice (small n, easy questions, strong baseline), not the absence of an averaging step.
-
-**Net.** The plumbing works end-to-end, the one technique that beat baseline is a reproducible FAISS-retrieved few-shot setup with a small but real point-estimate gain (+1.0 pp, not statistically significant at n=100), and the most expensive technique in the toolkit (combined + SC, k=5) confirmed that variance reduction alone won't get us there. The path to a statistically defensible answer is now clear: run the full 1,172-question test set with the same five strategies. CI shrinks from ±8 pp to ±~2 pp at that n, and the directional signal that few-shot retrieval is the strongest lever should either firm up into a statistically significant lift or wash out — either outcome is a defensible answer to the +2.5 pp target. Roughly 30–60 minutes per strategy on the metal server.
+**Net.** The definitive headline result is the **full-test tie** between baseline and FAISS few-shot (*n*=1,172). The **merged 500-ID subset** shows few-shot greedy **83.40%** vs few-shot + SC (*k*=3) **83.40%** (same 417 / 500) — SC added **no** aggregate lift. The +2.5 pp ARC assignment target is **not met**.

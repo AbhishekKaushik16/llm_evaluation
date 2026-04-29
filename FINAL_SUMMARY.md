@@ -1,15 +1,13 @@
 # Final Summary — Best Improvement and Lessons Learned
 
-The hypothesis going in was that a 3B instruct model on school-science questions would benefit more from *examples* than from *instruction*. That held: the only technique with a positive point estimate was **FAISS-retrieved few-shot prompting** — embed all 1,119 ARC train questions with `all-MiniLM-L6-v2`, build a cosine-similarity FAISS index, and at inference time pull the top-3 nearest train questions as in-context demonstrations. No manual example curation. That moved accuracy from 80.0% to 81.0% (+1.0 pp). Instruction prompting (−1.0 pp), chain-of-thought (−1.0 pp), combined-greedy (0.0 pp), and combined + self-consistency (k=5, T=0.7, also 0.0 pp) did not help on this slice. SC is the cleanest data point in the table: at ~15× the baseline cost it should have averaged out stylistic disagreements between the stacked techniques, and the fact that it landed at exactly 80.0% confirms the techniques don't disagree productively — there was no underlying lift for variance reduction to recover.
+**Full ARC test (*n*=1,172):** baseline **81.74%**, FAISS few-shot **81.57%**, McNemar *p*=0.91 — **no significant lift**; +2.5 pp target **not** met.
 
-What I'd take away if I were doing this again:
+**Same 500 questions:** baseline **82.40%**, few-shot greedy **83.40%**, few-shot + self-consistency (*k*=3) **83.40%** — greedy and SC tied at **417/500**; SC did not improve the headline aggregate.
 
-1. **Infrastructure shapes the experiment more than prompt engineering does.** The single biggest time sink was a `vllm-metal 0.2.0` bug that hardcodes `logprobs=None` in every `ModelRunnerOutput`, breaking the standard lm-eval log-likelihood scoring path. The workaround — a generation-based MC scorer that asks the model for a single answer letter and exact-matches it — is correct and reproducible, but it's not the canonical metric. Lesson: when the eval harness assumes a capability your serving stack doesn't have, you need a parallel non-likelihood path ready, or you don't get to evaluate.
-2. **Sample-size budgeting beats prompt cleverness at small n.** At n=100, the 95% CI on accuracy is ~±8 pp; the assignment's +2.5 pp target needs n≥400 (α=0.05, 80% power) to be detectable. I underestimated this. Every Δ in the table is directionally interpretable, not statistically defensible. Pick n from the target effect size *before* designing the prompt sweep.
-3. **Strong instruct baselines leave little headroom on easy slices.** Qwen2.5-3B-Instruct sits at 80% zero-shot on the first 100 ARC questions because they skew elementary-grade. A stratified slice across the grade band would have been the right thing to evaluate against.
-4. **Chain-of-thought can hurt regex-scored multiple choice** — not because reasoning got worse, but because verbose outputs occasionally drift off the strict letter-answer format and get mis-extracted. The answer parser is part of the evaluation system and needs its own test coverage.
-5. **Compose carefully — and SC isn't a free fix.** Stacking instruct + few-shot + CoT returned exactly to baseline; the techniques partially cancel because each pulls the model toward a different output style. Self-consistency on top of the combined prompt at k=5 (T=0.7) — the principled variance-reduction fix — also landed at 80.0%. SC works as advertised when the underlying samples disagree productively; here they didn't, so there was nothing for majority voting to recover. The bottleneck is sample size and slice composition, not technique choice.
+The small-*n*=100 slice had looked favorable for few-shot; **full-test and merged paired analyses supersede that.**
 
----
+1. **Infrastructure vs prompts** — When the server stack breaks logprobs, ship a parallel eval path or you cannot score canonical benchmarks.
+2. **Slice ≠ benchmark** — Prefix slices mislead; run the full test when it fits.
+3. **Long jobs** — Plug in power; long inference runs fail noisily if the laptop sleeps mid-request.
 
-For the full ablation table, technique descriptions, cost/latency trade-offs, statistical-validity notes, and reproducibility settings, see [`improve/report.md`](improve/report.md). For the headline benchmark numbers across all five parts, see the Results Summary section of [`README.md`](README.md).
+See [`README.md`](README.md) and [`improve/report.md`](improve/report.md).
