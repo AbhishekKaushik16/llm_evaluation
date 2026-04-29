@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Eval cache (regenerable, large)
+eval_runner/cache.db
+eval_runner/cache.db-shm
+eval_runner/cache.db-wal
+
+# Improve pipeline artifacts (regenerable from prepare_data.py / optimize_prompt.py)
+improve/data/
+improve/index/
+improve/prompts/
+
+# HuggingFace local cache (sometimes leaks into repo)
+.cache/
+hf_cache/

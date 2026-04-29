@@ -1,0 +1,1317 @@
+{
+  "strategy": "few_shot",
+  "accuracy": {
+    "accuracy": 0.81,
+    "accuracy_pct": 81.0,
+    "ci_low": 73.0,
+    "ci_high": 88.0,
+    "n": 100,
+    "n_correct": 81
+  },
+  "self_consistency_k": 1,
+  "temperature": 0.0,
+  "seed": 42,
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "results": [
+    {
+      "id": "Mercury_7252088",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: In a population of fruit flies, a mutation occurs that makes them more resistant to pesticides. This mutation is most likely to spread through the population because it\n  A. increases the survival and reproduction of individuals with the mutation.\n  B. decreases the survival and reproduction of individuals without the mutation.\n  C. causes the fruit flies to develop wings.\n  D. makes the fruit flies less attractive to predators.\nAnswer: A\n\nQuestion: A mutation that affects the structure of hemoglobin, leading to sickle-cell anemia, is an example of a\n  A. beneficial mutation.\n  B. lethal mutation.\n  C. neutral mutation.\n  D. adaptive mutation.\nAnswer: B\n\nQuestion: If a mutation occurs"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_409139",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following is an example of a symbiotic relationship?\n  A. A lion preying on a zebra.\n  B. A shark eating a fish.\n  C. A bee collecting nectar from a flower.\n  D. A parasite infecting a host.\nAnswer: C\n\nQuestion: What is the primary function of the gills in fish?\n  A. To breathe\n  B. To swim\n  C. To filter water\n  D. To produce sound\nAnswer: A\n\nQuestion: Which of the following is NOT a characteristic of a predator-prey relationship?\n  A. Predators hunt and kill prey.\n  B. Prey species evolve defenses against predators.\n  C. Pred"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_400578",
+      "answerKey": "A",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which animal demonstrates a learned behavior?\n  A. A bee collecting nectar.\n  B. A cat chasing a laser pointer.\n  C. A fish swimming in a school.\n  D. A butterfly flapping its wings.\nAnswer: B\n\nQuestion: Which behavior is an example of a learned behavior?\n  A. A chameleon changing color.\n  B. A dolphin performing tricks.\n  C. A lizard shedding its skin.\n  D. A snake slithering on the ground.\nAnswer: B\n\nQuestion: Which behavior is an example of a learned behavior?\n  A. A rabbit burrowing underground.\n  B. A parrot mimicking human speech.\n  C. A bear hibernating in winter"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7084665",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: Which of the following is NOT a reason why a telescope is useful?\n  A. To see distant objects that are too small or faint to be seen with the naked eye.\n  B. To measure the density of Earth's atmosphere.\n  C. To observe the surface of the Moon.\n  D. To better understand Earth.\nAnswer: B\n\nQuestion: Which of the following statements is true regarding the visibility of celestial bodies?\n  A. Stars are visible only during the day.\n  B. The Moon is visible only during the night.\n  C. Planets are visible only during the day.\n  D. The Sun is visible only during the day.\nAnswer: D\n\nQuestion: Which of the following is a correct"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_415303",
+      "answerKey": "A",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: Which of the following is not a living thing?\n  A. bacteria\n  B. fungi\n  C. rock\n  D. viruses\nAnswer: C\n\nQuestion: What is the primary role of photosynthesis in plants?\n  A. To produce oxygen\n  B. To produce food\n  C. To produce carbon dioxide\n  D. To produce water\nAnswer: B\n\nQuestion: Which of the following is a non-renewable resource?\n  A. wind\n  B. oil\n  C. sunlight\n  D. rain\nAnswer: B\n\nQuestion: In the context of plant growth, what is the role of water?\n  A. It provides structural support.\n  B. It"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7250058",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following statements about viruses is true?\n  A. Viruses can be seen under an optical microscope.\n  B. Viruses contain both DNA and RNA.\n  C. Viruses are considered living organisms.\n  D. Viruses are classified as prokaryotes.\nAnswer: C\n\nQuestion: Which of the following is a characteristic of prokaryotic cells?\n  A. They have a defined nucleus.\n  B. They lack a membrane-bound organelle.\n  C. They reproduce by mitosis.\n  D. They have a complex internal structure.\nAnswer: B\n\nQuestion: Which of the following is a key difference between prokaryotic and eukaryotic cells?\n  A."
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2001_8_4",
+      "answerKey": "D",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: In a chemical reaction, if 5 moles of carbon dioxide (CO\u2082) react with 5 moles of water (H\u2082O), what is the maximum number of moles of glucose (C\u2086H\u2081\u2082O\u2086) that can be formed according to the following balanced equation? C\u2086H\u2081\u2082O\u2086 + 6 CO\u2082 + 6 H\u2082O \u2192 6 CO\u2082 + 6 H\u2082O + C\u2086H\u2081\u2082O\u2086\n  A. 1 mole\n  B. 2 moles\n  C. 5 moles\n  D. 6 moles\nAnswer: A\n\nQuestion: Which of the following statements"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7012740",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: What is the primary source of energy for the Sun?\n  A. Nuclear fusion\n  B. Chemical reactions\n  C. Solar radiation\n  D. Gravitational pull\nAnswer: A\n\nQuestion: What is the main reason for the Sun's luminosity?\n  A. Its size\n  B. Nuclear fusion reactions\n  C. Its distance from Earth\n  D. Its mass\nAnswer: B\n\nQuestion: Which of the following is not a characteristic of the Sun?\n  A. It is a star\n  B. It is a planet\n  C. It is a gaseous sphere\n  D. It is composed mainly of hydrogen and helium\nAnswer: B\n\nQuestion: What"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "AKDE&ED_2008_4_25",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: Which of the following is an example of a physical change?\n  A. rusting of iron\n  B. burning of paper\n  C. melting of ice\n  D. cooking of food\nAnswer: C\n\nQuestion: Which of the following is a physical property of matter?\n  A. color\n  B. taste\n  C. smell\n  D. texture\nAnswer: A\n\nQuestion: Which of the following is a physical change?\n  A. rusting of iron\n  B. burning of paper\n  C. melting of ice\n  D. cooking of food\nAnswer: C\n\nQuestion: Which of the following is a chemical property of matter?\n  A. density\n  B"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2003_5_33",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following statements about the atmosphere is true?\n  A. It is composed of only nitrogen and oxygen.\n  B. It is made up of gases that are mostly inert.\n  C. It is a mixture of gases that includes water vapor.\n  D. It is a layer of gases that surrounds the Earth.\nAnswer: D\n\nQuestion: Which of the following is not a greenhouse gas?\n  A. carbon dioxide\n  B. methane\n  C. ozone\n  D. sulfur dioxide\nAnswer: D\n\nQuestion: Which of the following is not a greenhouse gas?\n  A. carbon dioxide\n  B. methane\n  C. ozone\n  D. sulfur dioxide\nAnswer: D\n\nQuestion"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7215845",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following is not a mineral?\n  A. salt\n  B. sand\n  C. iron ore\n  D. coal\nAnswer: D\n\nQuestion: Which of the following is a good way to separate a mixture of sand and iron filings?\n  A. pour the mixture through a sieve\n  B. pour the mixture into a beaker\n  C. pour the mixture through a magnet\n  D. pour the mixture through a filter paper\nAnswer: C\n\nQuestion: Which of the following is a good way to separate a mixture of sand and iron filings?\n  A. pour the mixture through a sieve\n  B. pour the mixture into a beaker\n  C. pour the"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "FCAT_2008_5_2",
+      "answerKey": "D",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: What is the primary function of roots in a plant?\n  A. to absorb water and nutrients from the soil\n  B. to produce flowers\n  C. to make seeds\n  D. to transport water to the leaves\nAnswer: A\n\nQuestion: Which of the following is not a function of the stem in a plant?\n  A. supporting the plant\n  B. storing food\n  C. producing flowers\n  D. transporting water and nutrients\nAnswer: C\n\nQuestion: How do roots primarily help a plant survive?\n  A. by absorbing sunlight\n  B. by absorbing water and nutrients from the soil\n  C. by producing flowers\n  D. by transporting water to the leaves\n"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_LBS10610",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the term for the process where water vapor condenses into liquid droplets?\n  1. evaporation\n  2. sublimation\n  3. freezing\n  4. condensation\nAnswer: 4\n\nQuestion: Which of these is not a type of precipitation?\n  1. rain\n  2. snow\n  3. hail\n  4. fog\nAnswer: 4\n\nQuestion: Which of the following is a characteristic of a cold front?\n  1. warm air moving under cool air\n  2. warm air moving over cool air\n  3. high pressure system\n  4. low pressure system\nAnswer: "
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_412202",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following is not a form of energy?\n  A. heat\n  B. light\n  C. mass\n  D. sound\nAnswer: C\n\nQuestion: What is the primary difference between a bar graph and a line graph?\n  A. A bar graph shows changes over time, while a line graph compares quantities.\n  B. A bar graph compares quantities, while a line graph shows changes over time.\n  C. A bar graph uses colors, while a line graph uses lines.\n  D. A bar graph can only show discrete data, while a line graph can show continuous data.\nAnswer: B\n\nQuestion: In an experiment where the temperature of a substance is measured at regular intervals, which"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7136885",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following statements about the greenhouse effect is true?\n  A. It is caused by the release of carbon dioxide into the atmosphere.\n  B. It is caused by the release of methane into the atmosphere.\n  C. It is caused by the release of sulfur dioxide into the atmosphere.\n  D. It is caused by the release of nitrogen oxide into the atmosphere.\nAnswer: A\n\nQuestion: Which of the following is a potential consequence of global warming?\n  A. Increased frequency of extreme weather events\n  B. Decreased frequency of extreme weather events\n  C. Decrease in ocean levels\n  D. Increase in the size of the polar ice caps\nAnswer: A\n\nQuestion: Which of the following"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_407400",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: A student observes that a plant grows faster when it receives more sunlight. To test this observation, the student decides to grow two plants under different conditions. What should be the control condition?\n  A. One plant in full sunlight, the other in partial shade.\n  B. Both plants in full sunlight.\n  C. Both plants in partial shade.\n  D. One plant in full sunlight, the other in darkness.\nAnswer: A\n\nQuestion: A student is investigating the effect of temperature on the rate of a chemical reaction. They perform the experiment at three different temperatures and record the results. Which of the following would be the best way to present their findings?\n  A. A pie chart showing the percentage of reactions completed at"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7068513",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: The Hawaiian Islands are formed by which type of volcanic activity?\n  A. shield volcanoes\n  B. cinder cones\n  C. stratovolcanoes\n  D. composite volcanoes\nAnswer: A\n\nQuestion: What is the primary cause of the formation of a caldera?\n  A. volcanic eruption\n  B. earthquake\n  C. glacial erosion\n  D. magma chamber collapse\nAnswer: D\n\nQuestion: Which of the following best describes the term \"volcanic arc\"?\n  A. a line of active volcanoes along a divergent boundary\n  B. a line of active volcanoes along a convergent boundary where an oceanic plate subducts beneath a"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7210245",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of these is a property of water that allows it to transport materials through the Earth system?\n  A. It expands as it solidifies.\n  B. It is transparent.\n  C. It dissolves many substances.\n  D. It is a compound.\nAnswer: C\n\nExplanation:\n- **A. It expands as it solidifies:** This property is related to the freezing of water, but it does not directly allow water to transport materials.\n- **B. It is transparent:** Transparency is useful for light transmission but does not facilitate material transport.\n- **C. It dissolves many substances:** This property makes water highly effective at transporting dissolved materials, such as nutrients and minerals, which is crucial for ecosystems.\n-"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_414041",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: A student observes a beaker of water with a few drops of food coloring added. After a while, the food coloring spreads evenly throughout the water. What type of change has occurred?\n  A. Chemical change\n  B. Physical change\n  C. Neither\n  D. Both chemical and physical change\nAnswer: B\n\nQuestion: A student observes a beaker of water with a few drops of food coloring added. After a while, the food coloring spreads evenly throughout the water. What type of change has occurred?\n  A. Chemical change\n  B. Physical change\n  C. Neither\n  D. Both chemical and physical change\nAnswer: B\n\nQuestion: A student observes a beaker of water"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_400059",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: What is the primary role of the kidneys in the body?\n  A. to produce urine\n  B. to regulate blood pressure\n  C. to filter blood\n  D. to maintain body temperature\nAnswer: C\n\nQuestion: Which of the following is not a function of the circulatory system?\n  A. transporting oxygen to cells\n  B. removing carbon dioxide from the body\n  C. producing red blood cells\n  D. regulating body temperature\nAnswer: D\n\nQuestion: Which of the following is an example of a positive feedback mechanism in the body?\n  A. sweating to cool down\n  B. digestion of food\n  C. regulation of blood glucose levels\n  D. the menstrual"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7212993",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: What is the primary role of the ozone layer in the Earth's atmosphere?\n  A. To absorb ultraviolet radiation\n  B. To reflect solar radiation\n  C. To increase atmospheric pressure\n  D. To cool the Earth's surface\nAnswer: A\n\nQuestion: Which of the following is not a greenhouse gas?\n  A. Carbon dioxide\n  B. Methane\n  C. Nitrogen\n  D. Water vapor\nAnswer: C\n\nQuestion: Which of the following statements about the carbon cycle is true?\n  A. The carbon cycle involves only living organisms.\n  B. The carbon cycle includes both living and non-living components.\n  C. The carbon cycle does not involve the ocean.\n"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "AKDE&ED_2008_4_26",
+      "answerKey": "C",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following is an example of a symbiotic relationship?\n  A. A plant growing in a desert.\n  B. A bee collecting nectar from a flower.\n  C. A shark eating a fish.\n  D. A fungus living on a tree.\nAnswer: D\n\nQuestion: Which of the following is not a type of reproduction?\n  A. budding\n  B. cloning\n  C. photosynthesis\n  D. binary fission\nAnswer: C\n\nQuestion: Which of the following is a characteristic of all living things?\n  A. They can move.\n  B. They can reproduce.\n  C. They can grow.\n  D. They can respond to stimuli.\nAnswer: D\n\n"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2014_8_20",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: A student is studying the properties of light. Which of the following experiments would best demonstrate the concept of refraction?\n  A. shining a flashlight through a glass prism\n  B. shining a flashlight through a clear plastic tube\n  C. shining a flashlight through a sheet of paper\n  D. shining a flashlight through a solid metal block\nAnswer: A\n\nQuestion: A student is conducting an experiment to study the effects of different types of soil on plant growth. Which of the following would be the most appropriate control group?\n  A. plants grown in a variety of soils\n  B. plants grown in a single type of soil\n  C. plants grown in a controlled environment with no soil\n  D."
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_408547",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the role of chlorophyll in the process of photosynthesis?\n  A. It absorbs light energy.\n  B. It converts light energy into chemical energy.\n  C. It stores the chemical energy.\n  D. It releases oxygen as a byproduct.\nAnswer: A\n\nQuestion: In the presence of light, which molecule acts as the primary source of energy for the conversion of carbon dioxide and water into glucose?\n  A. Glucose\n  B. Carbon dioxide\n  C. Water\n  D. Light\nAnswer: D\n\nQuestion: Which of the following statements accurately describes the role of chloroplasts in photosynthesis?\n  A. They absorb light energy.\n  B. They produce oxygen.\n"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_400402",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: What is the term for the change in position of the Sun as seen from Earth over the course of a year?\n  A. solstice\n  B. revolution\n  C. orbit\n  D. precession\nAnswer: A\n\nQuestion: Which of the following is an example of a natural phenomenon that repeats every 29.5 days?\n  A. the occurrence of a solar eclipse\n  B. the appearance of a new moon\n  C. the duration of daylight\n  D. the occurrence of a lunar eclipse\nAnswer: B\n\nQuestion: Which of the following events is caused by the tilt of Earth's rotational axis relative to its orbital plane?\n  A. the occurrence of a solar eclipse"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7175875",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the primary reason for the difference in day length between the equator and the poles?\n  A. axial tilt\n  B. distance from the Sun\n  C. the Moon's gravitational pull\n  D. the Sun's size\nAnswer: A\n\nQuestion: Which of the following best explains why the Moon has phases?\n  A. The Moon's rotation period matches its orbital period around Earth.\n  B. The Moon's orbit is elliptical, causing varying distances from Earth.\n  C. The Moon's rotation period is different from its orbital period around Earth.\n  D. The Moon's surface reflects sunlight differently at various times.\nAnswer: C\n\nQuestion: If an astronaut were to stand on the Moon"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7044328",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: Which of the following is an example of a negative impact of deforestation?\n  A. increased biodiversity\n  B. loss of habitat for wildlife\n  C. improved soil quality\n  D. enhanced water cycle\nAnswer: B\n\nQuestion: Which of the following is a primary cause of global warming?\n  A. volcanic eruptions\n  B. deforestation\n  C. urbanization\n  D. solar radiation\nAnswer: B\n\nQuestion: Which of the following is a positive impact of reforestation?\n  A. increased carbon dioxide levels\n  B. reduced soil erosion\n  C. increased air pollution\n  D. higher water consumption\nAnswer: B\n\nQuestion: Which of the following is"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_413240",
+      "answerKey": "A",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What is the term for the process where water changes from a liquid to a gas?\n  A. condensation\n  B. evaporation\n  C. precipitation\n  D. sublimation\nAnswer: B\n\nQuestion: Which of these is not a form of water found on Earth?\n  A. ice\n  B. steam\n  C. rock\n  D. fog\nAnswer: C\n\nQuestion: What is the name of the process that occurs when water changes from a liquid to a solid?\n  A. melting\n  B. boiling\n  C. freezing\n  D. condensing\nAnswer: C\n\nQuestion: Which of the following is not a form of water?\n  A."
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7235638",
+      "answerKey": "C",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What is the primary reason that the Earth's atmosphere is warmer during the day than at night?\n  A. The Earth's rotation\n  B. The Earth's revolution around the Sun\n  C. The greenhouse effect\n  D. The Moon's gravitational pull\nAnswer: C\n\nQuestion: Which of the following statements about the greenhouse effect is true?\n  A. It causes the Earth's surface to cool down.\n  B. It is caused by the reflection of sunlight by clouds.\n  C. It is the process by which carbon dioxide traps heat in the atmosphere.\n  D. It is the result of the Earth's magnetic field.\nAnswer: C\n\nQuestion: Which of the following is NOT a function of the"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_401116",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: The greenhouse effect is caused by\n  A. the reflection of sunlight off clouds.\n  B. the trapping of heat in the atmosphere by gases.\n  C. the absorption of heat by the sun's rays.\n  D. the cooling of the earth's surface.\nAnswer: B\n\nQuestion: Which of the following statements about the greenhouse effect is true?\n  A. It is solely caused by human activities.\n  B. It is beneficial to all life on Earth.\n  C. It is a natural phenomenon that has been occurring since the Earth was formed.\n  D. It is a recent phenomenon due to industrialization.\nAnswer: C\n\nQuestion: Which of the following is a primary source of carbon dioxide in the atmosphere"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7234308",
+      "answerKey": "A",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: Which of the following statements best describes the relationship between the theory of plate tectonics and the study of earthquakes?\n  A. Plate tectonics explains why some earthquakes are more destructive than others.\n  B. Plate tectonics helps predict the exact time and location of future earthquakes.\n  C. Plate tectonics is unrelated to the study of earthquakes.\n  D. Plate tectonics provides a framework for understanding the causes of earthquakes.\nAnswer: D\n\nQuestion: What is the primary reason scientists use the principle of superposition to determine the relative ages of rock layers?\n  A. The oldest layers are always at the bottom.\n  B. The youngest layers are always at the bottom.\n"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MEA_2010_8_1",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: What is the name of the region where stars are born?\n  A. nebula\n  B. galaxy\n  C. solar system\n  D. star cluster\nAnswer: A\n\nQuestion: Which of the following is NOT a celestial body?\n  A. Earth\n  B. planet\n  C. comet\n  D. asteroid\nAnswer: None of the above; all are celestial bodies.\n\nQuestion: Which of the following is a celestial body that does not emit its own light but reflects light from other sources?\n  A. Earth\n  B. planet\n  C. star\n  D. moon\nAnswer: D\n\nQuestion: Which of the following is a celestial body that can be seen with"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7186358",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following statements is true regarding the use of fossils in scientific research?\n  A. Fossils are only useful for dating rock layers.\n  B. Fossils provide direct evidence of past life forms.\n  C. Fossils are not useful for understanding evolutionary relationships.\n  D. Fossils can be used to determine the exact age of an organism.\nAnswer: B\n\nQuestion: When scientists find a new species of dinosaur, they often compare it with known species to understand its evolutionary relationships. This process is called:\n  A. stratigraphy\n  B. paleontology\n  C. phylogenetics\n  D. radiometric dating\nAnswer: C\n\nQuestion: A paleontologist finds"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7064680",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following statements is true regarding the density of a substance?\n  A. Density is the amount of space a substance takes up.\n  B. Density is the mass of a substance per unit volume.\n  C. Density is the temperature of a substance.\n  D. Density is the pressure of a substance.\nAnswer: B\n\nQuestion: What happens to the particles of a solid when it melts?\n  A. The particles move more slowly.\n  B. The particles move more quickly.\n  C. The particles become larger.\n  D. The particles become smaller.\nAnswer: B\n\nQuestion: Which of the following is an example of a physical change?\n  A. Rusting of iron.\n  B. Mel"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MDSA_2009_5_20",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following is a renewable resource?\n  A. coal\n  B. minerals\n  C. petroleum\n  D. sunlight\nAnswer: D\n\nQuestion: Which energy resource is non-renewable?\n  A. oil\n  B. solar\n  C. water\n  D. wind\nAnswer: A\n\nQuestion: Which is considered a nonrenewable resource?\n  A. oil\n  B. soil\n  C. food\n  D. water\nAnswer: A\n\nQuestion: Which activity shows the use of a nonrenewable natural resource?\n  A. A group of people swims in a river.\n  B. A construction crew builds an iron bridge.\n  C."
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "ACTAAP_2014_5_8",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What is the primary reason that the Sun appears yellow to us on Earth?\n  A. The Sun's light is scattered by Earth's atmosphere.\n  B. The Sun emits more yellow light than any other color.\n  C. The Sun's light is filtered through Earth's atmosphere before reaching our eyes.\n  D. The Sun's light is reflected off Earth's oceans.\nAnswer: C\n\nQuestion: Which of the following statements is true regarding the Sun's composition?\n  A. It is primarily composed of hydrogen and helium.\n  B. It contains a significant amount of water.\n  C. It is mostly made up of carbon and oxygen.\n  D. It has a high percentage of iron.\nAnswer: A\n\nQuestion"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_414099",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: A student is examining a slide of a plant cell under a microscope. The student notices that the cell has a large central vacuole. What can the student infer about the function of this vacuole?\n  A. It stores water and waste products.\n  B. It controls the cell's movement.\n  C. It produces energy for the cell.\n  D. It regulates the cell's temperature.\nAnswer: A\n\nQuestion: A student is asked to describe the process of photosynthesis. Which of the following statements is accurate?\n  A. Photosynthesis occurs in the mitochondria of plant cells.\n  B. Chlorophyll captures light energy and converts it into chemical energy.\n  C. Oxygen is produced as a"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7166425",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: A scientist is studying the effect of temperature on the rate of a chemical reaction. She conducts an experiment where she increases the temperature of the reactants. What is the expected outcome?\n  A. The reaction rate decreases.\n  B. The reaction rate remains unchanged.\n  C. The reaction rate increases.\n  D. The reaction stops.\nAnswer: C\n\nQuestion: A student is conducting an experiment to determine the specific heat capacity of a metal. They heat the metal and measure its temperature change. Which of the following pieces of information is not necessary for calculating the specific heat capacity?\n  A. The mass of the metal\n  B. The initial temperature of the metal\n  C. The final temperature of the metal\n"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_178325",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: A student is investigating the effect of light intensity on plant growth. Which of the following would be the most appropriate unit to measure the height of the plants?\n  A. millimeters\n  B. decibels\n  C. degrees Celsius\n  D. kilograms\nAnswer: A\n\nQuestion: A researcher is studying the impact of different types of soil on plant growth. To compare the growth rates of plants grown in various soils, which of the following should be used as the independent variable?\n  A. the type of soil\n  B. the amount of water given to the plants\n  C. the time of day the plants are watered\n  D. the color of the pots the plants are grown in"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7211680",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the primary function of the circulatory system?\n  A. To provide nutrients and oxygen to cells\n  B. To produce hormones\n  C. To regulate body temperature\n  D. To store genetic information\nAnswer: A\n\nQuestion: Which of these is not a function of the respiratory system?\n  A. Producing energy through cellular respiration\n  B. Transporting gases between the lungs and blood\n  C. Removing carbon dioxide from the body\n  D. Facilitating gas exchange in the alveoli\nAnswer: A\n\nQuestion: In which part of the human body are the kidneys primarily located?\n  A. The heart\n  B. The brain\n  C. The liver\n"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MDSA_2007_8_3",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: Which of the following is a reason why trees are important to humans?\n  A. They provide shade and shelter.\n  B. They produce oxygen.\n  C. They help prevent soil erosion.\n  D. All of the above\nAnswer: D"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_400407",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following is not a planet?\n  A. Mercury\n  B. Venus\n  C. Uranus\n  D. Pluto\nAnswer: D\n\nQuestion: What is the name of the largest planet in our solar system?\n  A. Jupiter\n  B. Saturn\n  C. Neptune\n  D. Uranus\nAnswer: A\n\nQuestion: Which of the following is not a dwarf planet?\n  A. Pluto\n  B. Ceres\n  C. Eris\n  D. Mars\nAnswer: D\n\nQuestion: Which of the following is not a gas giant?\n  A. Jupiter\n  B. Saturn\n  C. Neptune\n  D. Uranus\nAnswer"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_410807",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What is the primary reason for the development of gills in a fish embryo?\n  A. To breathe underwater\n  B. To swim faster\n  C. To move towards light\n  D. To find food\nAnswer: A\n\nQuestion: In the context of animal survival, what is the significance of the ability to fly in birds?\n  A. To escape from predators\n  B. To migrate to new habitats\n  C. To reproduce more easily\n  D. To eat more efficiently\nAnswer: A\n\nQuestion: Which of the following best describes the role of gills in fish?\n  A. They are used for swimming.\n  B. They help in breathing underwater.\n  C. They aid"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7212678",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: What is the main difference between a conductor and an insulator?\n  A. Conductors have more electrons than insulators.\n  B. Conductors allow electricity to flow through them easily, while insulators do not.\n  C. Insulators are always solid, while conductors can be liquid.\n  D. Conductors are always metal, while insulators are not.\nAnswer: B\n\nQuestion: Which of the following materials is typically used as an insulator?\n  A. Copper\n  B. Rubber\n  C. Iron\n  D. Aluminum\nAnswer: B\n\nQuestion: When a battery is connected to a light bulb, what happens to the electrons?\n  A. They move from the light bulb to"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_180373",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following is a characteristic of igneous rocks?\n  A. They form from the cooling and solidification of magma or lava.\n  B. They are formed by the deposition of sediments.\n  C. They are formed by the compression of sedimentary rocks.\n  D. They are formed by the chemical weathering of rocks.\nAnswer: A\n\nQuestion: What is the main difference between sedimentary and metamorphic rocks?\n  A. Sedimentary rocks are formed from the cooling of magma, while metamorphic rocks are formed from the cooling of lava.\n  B. Sedimentary rocks are formed from the cooling of magma, while metamorphic rocks are formed from the heating and pressure of existing rocks.\n  C."
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_403234",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: When a ball rolls down a hill, its velocity increases. This increase in velocity is due to:\n  A. a decrease in gravitational potential energy.\n  B. a decrease in kinetic energy.\n  C. an increase in gravitational potential energy.\n  D. an increase in kinetic energy.\nAnswer: D\n\nQuestion: Which of the following statements correctly describes the relationship between mass and weight?\n  A. Weight is directly proportional to mass.\n  B. Weight is inversely proportional to mass.\n  C. Mass is directly proportional to weight.\n  D. Mass is inversely proportional to weight.\nAnswer: A\n\nQuestion: A person is standing on a scale in an elevator. If the elevator is accelerating upwards, how does"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7116288",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following is not a function of a root in a plant?\n  A. absorbing water and minerals\n  B. storing food\n  C. supporting the plant\n  D. producing flowers\nAnswer: D\n\nQuestion: What is the role of chloroplasts in a plant cell?\n  A. to store water\n  B. to produce glucose\n  C. to transport nutrients\n  D. to absorb light energy\nAnswer: B\n\nQuestion: Which part of a plant is primarily responsible for transporting water and nutrients throughout the plant?\n  A. roots\n  B. stems\n  C. leaves\n  D. flowers\nAnswer: B\n\nQuestion: What is the primary function of the"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7094290",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: The process by which a plant takes in water and minerals from the soil and transports them to other parts of the plant is called\n  1. photosynthesis\n  2. respiration\n  3. transpiration\n  4. translocation\nAnswer: 4\n\nQuestion: Which of the following is not a function of the circulatory system?\n  1. Transporting oxygen to body tissues\n  2. Transporting nutrients to body tissues\n  3. Transporting carbon dioxide away from body tissues\n  4. Producing red blood cells\nAnswer: 4\n\nQuestion: Which of the following is not a function of the respiratory system?\n  1. Transporting"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "TAKS_2009_8_32",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: Which of these is an example of a learned behavior in humans?\n  A. sweating when hot\n  B. crying when hurt\n  C. laughing at jokes\n  D. blinking when something touches the eye\nAnswer: C\n\nQuestion: Which of the following is an inherited trait?\n  A. The ability to roll one's tongue\n  B. The color of one's hair\n  C. The height of one's parents\n  D. The ability to speak a language\nAnswer: A\n\nQuestion: Which of the following is an example of a learned behavior in animals?\n  A. A dog barking at strangers\n  B. A bird building a nest\n  C. A fish swimming\n"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7216248",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following is a characteristic of all living things?\n  A. They can move.\n  B. They can reproduce.\n  C. They can photosynthesize.\n  D. They can breathe.\nAnswer: B\n\nQuestion: Which of the following is a function of the cell membrane?\n  A. It stores genetic information.\n  B. It controls what enters and leaves the cell.\n  C. It converts light into energy.\n  D. It produces energy for the cell.\nAnswer: B\n\nQuestion: Which of the following is a function of the cell wall?\n  A. It stores genetic information.\n  B. It controls what enters and leaves the cell.\n  C. It provides support and protection.\n"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2004_9_15-v1",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What is the term for the process where a liquid or gas is forced into a confined space to perform work?\n  A. compression\n  B. expansion\n  C. liquefaction\n  D. vaporization\nAnswer: A\n\nQuestion: Which of the following is an example of a renewable resource?\n  A. coal\n  B. oil\n  C. natural gas\n  D. solar energy\nAnswer: D\n\nQuestion: Which of the following is a characteristic of a living organism?\n  A. It can move on its own.\n  B. It can reproduce.\n  C. It can grow.\n  D. All of the above.\nAnswer: D\n\nQuestion: Which of the following is a"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7011323",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: Which of the following is most likely to be found in a compost pile?\n  A. plastic bags\n  B. leaves\n  C. metal cans\n  D. glass bottles\nAnswer: B\n\nQuestion: What is the main reason that recycling is beneficial to the environment?\n  A. It reduces the need for new raw materials.\n  B. It increases the amount of waste sent to landfills.\n  C. It decreases the amount of energy used in manufacturing.\n  D. It makes more space available for landfills.\nAnswer: A\n\nQuestion: Which of the following is a renewable resource?\n  A. coal\n  B. oil\n  C. natural gas\n  D. solar energy\nAnswer"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_412681",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the effect on the gravitational force between two objects if one object's mass is doubled while the distance between them remains constant?\n  A. The gravitational force is doubled.\n  B. The gravitational force is halved.\n  C. The gravitational force remains unchanged.\n  D. The gravitational force is quadrupled.\nAnswer: A\n\nQuestion: If you have two identical planets orbiting a star, which factor would cause the gravitational force between the planet and the star to be greater?\n  A. The planet being closer to the star.\n  B. The planet being farther from the star.\n  C. The planet having more mass.\n  D. The star having more mass.\nAnswer: A\n\nQuestion: Which"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7186568",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following statements about the digestive system is true?\n  A. The digestive system breaks down food into smaller molecules.\n  B. The digestive system absorbs water from the food.\n  C. The digestive system produces hormones to regulate blood sugar levels.\n  D. The digestive system eliminates waste products from the body.\nAnswer: A\n\nQuestion: Which of the following is a correct statement regarding the role of enzymes in the human body?\n  A. Enzymes increase the rate of metabolic reactions.\n  B. Enzymes decrease the activation energy required for chemical reactions.\n  C. Enzymes are only found in the digestive system.\n  D. Enzymes are not involved in the breakdown of food.\nAnswer"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2003_8_11",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: Which of the following statements about the periodic table is true?\n  A. The periodic table lists all known elements.\n  B. The periodic table shows the atomic number of each element.\n  C. The periodic table shows the melting point of each element.\n  D. The periodic table shows the boiling point of each element.\nAnswer: B\n\nQuestion: Which of the following is not a property of matter?\n  A. Mass\n  B. Temperature\n  C. Color\n  D. Volume\nAnswer: C\n\nQuestion: Which of the following is a physical change?\n  A. Rusting of iron\n  B. Melting of ice\n  C. Burning of paper\n  D. Dissolving sugar"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_409171",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: A scientist is studying the effects of temperature on the growth rate of bacteria. She places two identical Petri dishes, each containing the same type of bacteria, in different environments. One dish is kept at room temperature, while the other is kept at a higher temperature. After a week, she observes that the bacteria in the warmer dish has grown more than the bacteria in the cooler dish. What can be concluded from this observation?\n  A. Higher temperatures always lead to faster bacterial growth.\n  B. Temperature affects the growth rate of bacteria.\n  C. Room temperature is optimal for bacterial growth.\n  D. Bacteria prefer warm environments.\nAnswer: B\n\nQuestion: A student is conducting an experiment to determine the effect of light"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_417677",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following is not a characteristic of a living thing?\n  A. growth\n  B. reproduction\n  C. movement\n  D. photosynthesis\nAnswer: C\n\nQuestion: Which of the following is an example of a non-living thing?\n  A. a tree\n  B. a rock\n  C. a fish\n  D. a car\nAnswer: B\n\nQuestion: Which of the following is a living thing?\n  A. a rock\n  B. a tree\n  C. a car\n  D. a house\nAnswer: B\n\nQuestion: Which of the following is not a characteristic of a living thing?\n  A. growth\n  B. reproduction\n"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7109463",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: What is the primary role of carbon dioxide in the carbon cycle?\n  A. It is used to form glucose in plants.\n  B. It is a byproduct of cellular respiration.\n  C. It is a greenhouse gas that helps regulate Earth's temperature.\n  D. It is a nutrient for bacteria.\nAnswer: C\n\nQuestion: Which of the following statements about the carbon cycle is true?\n  A. The carbon cycle is only active during the day.\n  B. The carbon cycle involves only living organisms.\n  C. The carbon cycle is a closed system with no exchange of carbon with the outside world.\n  D. The carbon cycle includes both biotic and abiotic components.\nAnswer: D\n\nQuestion:"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_26",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the primary reason that animals migrate?\n  A. to find food\n  B. to escape predators\n  C. to reproduce\n  D. to avoid harsh weather conditions\nAnswer: D\n\nQuestion: Which of these is an example of an animal adapting to its environment?\n  A. a bird building a nest\n  B. a fish swimming in water\n  C. a frog changing color when it rains\n  D. a snake shedding its skin\nAnswer: C\n\nQuestion: Which animal is likely to be active during the day?\n  A. a bat\n  B. a deer\n  C. an owl\n  D. a skunk\nAnswer: B\n\nQuestion: What is"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_402216",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: In the process of photosynthesis, plants convert carbon dioxide (CO_{2}) and water (H_{2}O) into glucose (C_{6}H_{12}O_{6}) and oxygen (O_{2}). Which of the following equations correctly represents this transformation?\n  A. CO_{2} + H_{2}O -> C_{6}H_{12}O_{6} + O_{2}\n  B. 6CO_{2} + 6H_{2}O -> C_{6}H_{12}O_{6} + 6O_{2}\n  C. 6CO_{2} + 6H_{2}O ->"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_400440",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: Which of the following is not a physical change?\n  A. melting ice\n  B. burning paper\n  C. dissolving sugar in water\n  D. rusting iron\nAnswer: A\n\nQuestion: Which of the following is an example of a physical change?\n  A. burning a piece of paper\n  B. freezing water into ice\n  C. cooking an egg\n  D. rusting of a nail\nAnswer: B\n\nQuestion: Which of the following is a chemical change?\n  A. dissolving sugar in water\n  B. melting ice\n  C. burning a candle\n  D. boiling water\nAnswer: C\n\nQuestion: Which of the following is a physical property"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_401620",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: Which event occurs every year?\n  A. the Moon's orbit around Earth\n  B. the Sun's orbit around the Milky Way\n  C. the Earth's orbit around the Sun\n  D. the Earth's rotation on its axis\nAnswer: C\n\nQuestion: Which event occurs every month?\n  A. the Moon's orbit around Earth\n  B. the Sun's orbit around the Milky Way\n  C. the Earth's orbit around the Sun\n  D. the Earth's rotation on its axis\nAnswer: A\n\nQuestion: Which event occurs every 18 years?\n  A. the Moon's orbit around Earth\n  B. the Sun's orbit around the Milky Way\n  C."
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_401277",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the main source of energy for the food chain in the deep sea?\n  A. sunlight\n  B. chemosynthesis\n  C. photosynthesis\n  D. bioluminescence\nAnswer: B\n\nQuestion: Which of the following is an example of bioluminescence?\n  A. firefly\n  B. jellyfish\n  C. both A and B\n  D. none of the above\nAnswer: C\n\nQuestion: Which of the following is a characteristic of the deep sea?\n  A. high pressure\n  B. low temperature\n  C. darkness\n  D. all of the above\nAnswer: D\n\nQuestion: Which of the following is a type of"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_404894",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: What is the main reason that a bird would choose to build its nest in a tree rather than on the ground?\n  A. To avoid predators\n  B. To stay warm\n  C. To have better access to food\n  D. To be closer to water\nAnswer: A\n\nQuestion: Which of the following is not a function of feathers in birds?\n  A. Insulation\n  B. Flight\n  C. Camouflage\n  D. Drinking water\nAnswer: D\n\nQuestion: Which of the following is a true statement about the migration of birds?\n  A. All birds migrate to escape the cold.\n  B. Migration patterns are determined by the availability of food.\n  C. Birds"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_416529",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What is the main reason that a plant's roots grow downward?\n  A. to absorb nutrients\n  B. to anchor the plant\n  C. to store water\n  D. to produce flowers\nAnswer: B\n\nQuestion: Which of the following is not a function of a plant's roots?\n  A. absorbing water\n  B. storing food\n  C. producing flowers\n  D. anchoring the plant\nAnswer: C\n\nQuestion: In a desert ecosystem, what adaptation would you expect to find in plants?\n  A. deep taproots\n  B. small leaves\n  C. broad leaves\n  D. shallow roots\nAnswer: A\n\nQuestion: How does a cactus adapt"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_407327",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: A student is conducting an experiment to measure the effect of different types of soil on plant growth. She uses four different types of soil and measures the height of the plants after one month. What type of data is she collecting?\n  A. Qualitative\n  B. Quantitative\n  C. Nominal\n  D. Ordinal\nAnswer: B\n\nQuestion: A scientist is studying the effects of temperature on the rate of a chemical reaction. He keeps all other variables constant except for temperature, which he varies. What is the independent variable in this experiment?\n  A. Temperature\n  B. Rate of the chemical reaction\n  C. The scientist\n  D. The chemicals used in the reaction\nAnswer:"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2005_5_25",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: A student is conducting an experiment to determine the effect of temperature on the rate of a chemical reaction. They observe that as the temperature increases, the rate of the reaction also increases. This observation supports which of the following statements?\n  A. Temperature decreases the activation energy required for a reaction.\n  B. Temperature increases the number of collisions between reactant molecules.\n  C. Temperature increases the frequency of collisions between reactant molecules.\n  D. Temperature decreases the frequency of collisions between reactant molecules.\nAnswer: B\n\nQuestion: A scientist is studying the phase changes of water. She observes that when water is cooled below 0\u00b0C, it does not become a gas but instead becomes a solid. What is this solid form of"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_400877",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following statements about isotopes is true?\n  A. Isotopes have different numbers of protons.\n  B. Isotopes have different numbers of neutrons.\n  C. Isotopes have different numbers of electrons.\n  D. Isotopes have different atomic masses.\nAnswer: B\n\nQuestion: How many neutrons are in a nitrogen-14 atom?\n  A. 6\n  B. 7\n  C. 8\n  D. 10\nAnswer: A\n\nQuestion: What is the total number of particles (protons, neutrons, and electrons) in a neutral atom of oxygen-16?\n  A. 16\n  B"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2002_8_11",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following statements is true regarding the relationship between temperature and heat transfer?\n  A. Heat always moves from a hotter object to a cooler one.\n  B. Heat always moves from a cooler object to a hotter one.\n  C. Temperature does not affect heat transfer.\n  D. Heat can only move from an object with more mass to an object with less mass.\nAnswer: A\n\nQuestion: A metal spoon is heated and then placed in a bowl of cold soup. What will happen to the temperature of the soup?\n  A. The temperature of the soup will increase.\n  B. The temperature of the soup will decrease.\n  C. The temperature of the soup will remain the same.\n  D. The"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2006_8_1",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: Which of the following is not a function of the lymphatic system?\n  A. transport of fats\n  B. removal of cellular debris\n  C. production of red blood cells\n  D. immune response\nAnswer: C\n\nQuestion: Which of the following statements about the circulatory system is true?\n  A. It transports only oxygenated blood.\n  B. It consists of the heart and blood vessels.\n  C. It includes the lungs for gas exchange.\n  D. It is responsible for removing waste products from the body.\nAnswer: B\n\nQuestion: Which organ is primarily responsible for filtering blood and producing urine?\n  A. liver\n  B. kidney\n  C. spleen\n  D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7174213",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: What happens to the speed of sound when it travels from air into water?\n  A. It increases.\n  B. It decreases.\n  C. It remains constant.\n  D. It becomes zero.\nAnswer: A\n\nQuestion: Which of the following statements about sound waves is true?\n  A. They can only travel through solids.\n  B. They require a medium to travel.\n  C. They are not affected by temperature changes.\n  D. They can travel faster in a vacuum than in air.\nAnswer: B\n\nQuestion: If you were to compare the speed of sound in air and in steel, which would be faster?\n  A. Air\n  B. Steel\n  C. Both are the same"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_401272",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: What is the main reason for the filament in a light bulb to burn out?\n  A. The filament is made of a material that easily conducts electricity.\n  B. The filament is made of a material that does not conduct electricity well.\n  C. The filament is made of a material that is too strong.\n  D. The filament is made of a material that is too weak.\nAnswer: B\n\nQuestion: Which of the following statements about the light bulb is true?\n  A. It was invented before the telephone.\n  B. It was invented after the telephone.\n  C. It was invented at the same time as the telephone.\n  D. It was invented before the radio.\nAnswer: B\n\nQuestion:"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_405086",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What is the term for the process where water vapor condenses into liquid droplets?\n  A. evaporation\n  B. sublimation\n  C. freezing\n  D. condensation\nAnswer: D\n\nQuestion: Which of the following is not a type of weather?\n  A. temperature\n  B. humidity\n  C. pressure\n  D. earthquake\nAnswer: D\n\nQuestion: Which of the following is a characteristic of a hurricane?\n  A. high pressure\n  B. low pressure\n  C. warm air\n  D. cold air\nAnswer: B\n\nQuestion: Which of the following is a type of weather phenomenon?\n  A. earthquake\n  B. tsunami\n"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "TIMSS_2003_8_pg80",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: In which part of the body do frogs breathe through their skin?\n  A. mouth\n  B. eyes\n  C. lungs\n  D. skin\nAnswer: D\n\nQuestion: What is the primary role of the heart in the circulatory system?\n  A. To pump blood\n  B. To produce energy\n  C. To filter blood\n  D. To store blood\nAnswer: A\n\nQuestion: Which of the following is not a function of the kidneys?\n  A. Filtration\n  B. Regulation of water and electrolytes\n  C. Production of urine\n  D. Generation of energy\nAnswer: D\n\nQuestion: What is the main function of the gills in"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2006_9_44",
+      "answerKey": "D",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: A car travels at a constant speed of 20 meters per second for 10 seconds. How far does it travel?\n  A. 200 meters\n  B. 100 meters\n  C. 20 meters\n  D. 1 meter\nAnswer: A\n\nQuestion: What is the formula for calculating the area of a rectangle?\n  A. Length x Width\n  B. Length / Width\n  C. Length + Width\n  D. Length - Width\nAnswer: A\n\nQuestion: Which of the following statements is true regarding the relationship between mass and weight?\n  A. Mass and weight are always equal.\n  B. Weight is directly proportional to mass.\n"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_34",
+      "answerKey": "2",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What happens to the energy of a ball when it bounces up from the ground?\n  A. It converts into sound energy.\n  B. It converts into heat energy.\n  C. It converts back into gravitational potential energy.\n  D. It converts into electrical energy.\nAnswer: C\n\nQuestion: A pendulum swings back and forth. At its highest point, what type of energy does the pendulum have?\n  A. Kinetic energy\n  B. Potential energy\n  C. Thermal energy\n  D. Electrical energy\nAnswer: B\n\nQuestion: When a ball is thrown upwards, which form of energy does it convert into at the highest point of its trajectory?\n  A. Kinetic energy\n "
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7103600",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: A student is conducting an experiment to determine how temperature affects the rate of photosynthesis in plants. He measures the amount of oxygen produced by plants at different temperatures. Which of the following would be the dependent variable in his experiment?\n  A. Temperature\n  B. Oxygen production\n  C. Plant species\n  D. Light intensity\nAnswer: B\n\nQuestion: In a study where researchers are examining the impact of different types of music on plant growth, they find that classical music leads to faster growth than rock music. If they want to generalize their findings to all types of music, which of the following statements is true?\n  A. Classical music is the only type of music that promotes plant growth.\n  B. Rock"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_416645",
+      "answerKey": "D",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following statements is true regarding the movement of organisms?\n  A. Volvox and paramecium both move toward light.\n  B. Volvox and paramecium both move away from light.\n  C. Volvox moves toward light, but paramecium moves away from light.\n  D. Volvox moves away from light, but paramecium moves toward light.\nAnswer: D\n\nQuestion: Which of the following is a key difference between a paramecium and a volvox?\n  A. Paramecium can reproduce sexually, but volvox cannot.\n  B. Paramecium is unicellular, while volvox is multicellular.\n  C. Parame"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_408324",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: A student placed a metal spoon in a pot of boiling water. After a while, the spoon became hot. This is an example of:\n  A. condensation\n  B. evaporation\n  C. heat transfer\n  D. freezing\nAnswer: C\n\nQuestion: A student placed a metal spoon in a pot of boiling water. After a while, the spoon became hot. This is an example of:\n  A. condensation\n  B. evaporation\n  C. heat transfer\n  D. freezing\nAnswer: C\n\nQuestion: A student placed a metal spoon in a pot of boiling water. After a while, the spoon became hot. This is an example of:\n  A. cond"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7270393",
+      "answerKey": "B",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: Which of the following is a characteristic of a virus?\n  A. It reproduces using its host's cellular machinery.\n  B. It is composed of cells.\n  C. It can survive without a host.\n  D. It can reproduce on its own.\nAnswer: A\n\nQuestion: Which of the following is a characteristic of a virus?\n  A. It reproduces using its host's cellular machinery.\n  B. It is composed of cells.\n  C. It can survive without a host.\n  D. It can reproduce on its own.\nAnswer: A\n\nQuestion: Which of the following is a characteristic of a virus?\n  A. It reproduces using its host's cellular machinery.\n  B. It"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7212398",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of these is not a property of water?\n  A. It expands when it freezes.\n  B. It is a good conductor of electricity.\n  C. It can dissolve many substances.\n  D. It is a gas at room temperature.\nAnswer: D\n\nQuestion: Which of the following is an example of a chemical change?\n  A. Melting ice cream\n  B. Rusting of iron\n  C. Evaporation of water\n  D. Cutting paper\nAnswer: B\n\nQuestion: Which of the following is a physical property of water?\n  A. Boiling point\n  B. Flammability\n  C. Reactivity\n  D. Solubility\nAnswer: A\n\n"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MDSA_2009_8_2",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: What is the term used to describe the time it takes for a planet to complete one orbit around the Sun?\n  A. Revolution\n  B. Rotation\n  C. Revolution (repeated)\n  D. Revolution (repeated)\nAnswer: A\n\nQuestion: What is the term used to describe the time it takes for a planet to complete one orbit around the Sun?\n  A. Revolution\n  B. Rotation\n  C. Revolution (repeated)\n  D. Revolution (repeated)\nAnswer: A\n\nQuestion: What is the term used to describe the time it takes for a planet to complete one orbit around the Sun?\n  A. Revolution\n  B. Rotation\n  C. Revolution (re"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7218820",
+      "answerKey": "B",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: What is the primary difference between weather and climate?\n  A. Weather is short-term atmospheric conditions, while climate is long-term patterns of weather.\n  B. Weather is long-term atmospheric conditions, while climate is short-term patterns of weather.\n  C. Weather is always changing, while climate remains constant.\n  D. Climate is always changing, while weather remains constant.\nAnswer: A\n\nQuestion: Which of the following statements about the greenhouse effect is true?\n  A. The greenhouse effect is caused by the emission of carbon dioxide from volcanic eruptions.\n  B. The greenhouse effect is responsible for the formation of hurricanes.\n  C. The greenhouse effect is the process by which the Earth's atmosphere traps heat from the sun.\n"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_406777",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: What is the primary difference between asexual and sexual reproduction?\n  A. Asexual reproduction involves two parents, while sexual reproduction involves one parent.\n  B. Asexual reproduction results in offspring with identical genetic makeup, while sexual reproduction results in offspring with varied genetic makeup.\n  C. Sexual reproduction occurs in plants, while asexual reproduction occurs in animals.\n  D. Asexual reproduction produces offspring that are genetically different, while sexual reproduction produces offspring that are genetically identical.\nAnswer: B\n\nQuestion: Which of the following statements about asexual reproduction is true?\n  A. It always leads to offspring with new traits.\n  B. It typically results in offspring that are genetically identical to the parent.\n  C. It is the"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2014_5_7",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the main difference between a reptile and an amphibian?\n  A. Reptiles are cold-blooded and amphibians are warm-blooded.\n  B. Reptiles have scales and amphibians do not.\n  C. Reptiles live in water and amphibians live on land.\n  D. Reptiles lay eggs with hard shells and amphibians lay soft-shelled eggs.\nAnswer: D\n\nQuestion: Which of these animals is most likely to be found living and feeding on the forest floors of Virginia?\n  A. Bat\n  B. Trout\n  C. Deer mouse\n  D. Golden eagle\nAnswer: C\n\nExplanation:\n- **Bat (A)**: Bats are"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_401290",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the primary purpose of using a seismograph?\n  A. To measure the depth of earthquakes\n  B. To measure the intensity of earthquakes\n  C. To measure the magnitude of earthquakes\n  D. To measure the duration of earthquakes\nAnswer: C\n\nQuestion: Which of the following statements about the Earth's magnetic field is true?\n  A. It is caused by the movement of tectonic plates.\n  B. It is generated by the rotation of the Earth.\n  C. It is created by the movement of molten iron in the outer core.\n  D. It is influenced by the gravitational pull from the moon.\nAnswer: C\n\nQuestion: Which of the following is a correct statement"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7127943",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: Which of the following is NOT a reason why the theory of plate tectonics is considered a scientific theory?\n  A. It has been tested and supported by multiple lines of evidence.\n  B. It can be proven true or false through experiments.\n  C. It explains a wide range of geological phenomena.\n  D. It is based on extensive research and observation.\nAnswer: B\n\nQuestion: What is the primary difference between the theory of continental drift and the theory of plate tectonics?\n  A. Continental drift suggests that continents are stationary, while plate tectonics suggests they move.\n  B. Continental drift is a hypothesis, while plate tectonics is a theory.\n  C. Continental"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "AKDE&ED_2008_4_19",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: What is the main difference between a hypothesis and a theory in science?\n  A. A hypothesis is proven, while a theory is not.\n  B. A hypothesis is based on observation, while a theory is based on speculation.\n  C. A hypothesis is a guess, while a theory is a well-substantiated explanation.\n  D. A hypothesis is a generalization, while a theory is a specific observation.\nAnswer: C\n\nQuestion: Which of the following statements is an example of a scientific law?\n  A. Water boils at 100 degrees Celsius at sea level.\n  B. Plants need sunlight to grow.\n  C. All living things are made of cells.\n  D. The sun rises in"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_LBS11018",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\n\nQuestion: A student is conducting an experiment to determine the density of a rock sample. Which of the following tools would be most appropriate for this experiment?\n  A. a ruler\n  B. a balance\n  C. a magnifying glass\n  D. a thermometer\nAnswer: B\n\nQuestion: In a chemistry lab, a student mixes two solutions and observes a precipitate forming. This indicates that:\n  A. the reaction is exothermic.\n  B. there is a chemical reaction between the solutions.\n  C. the temperature of the mixture has increased.\n  D. the solubility of one solution has increased.\nAnswer: B\n\nQuestion: A student is asked to identify the element with the atomic number "
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7086660",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following is the best evidence that an area of land was once covered by a glacier?\n  A. limestone caverns\n  B. marine fossils\n  C. abrasion of surface rocks\n  D. peeling slabs of rock\nAnswer: C\n\nExplanation:\n- **Limestone caverns (A)**: These are typically associated with karst landscapes, which form in areas with soluble rocks like limestone. They are not directly related to glaciation.\n- **Marine fossils (B)**: Marine fossils indicate that the area was once underwater, which could be due to various geological processes but not necessarily glaciation.\n- **Abrasion of surface rocks (C)**: This is a clear sign of"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_SC_402120",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: When conducting an experiment to measure the rate of evaporation of a liquid, which of the following tools is essential?\n  A. a ruler\n  B. a stopwatch\n  C. a calculator\n  D. a thermometer\nAnswer: B\n\nQuestion: A student is investigating the effect of different solvents on the boiling point of a substance. Which tool should they primarily use to measure the boiling points accurately?\n  A. a stopwatch\n  B. a thermometer\n  C. a scale\n  D. a graduated cylinder\nAnswer: B\n\nQuestion: To measure the volume of a liquid precisely, which tool should a student use?\n  A. a ruler\n  B. a thermometer\n  C."
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "ACTAAP_2009_7_8",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: Which of the following is an example of a controlled experiment?\n  A. Observing the growth of plants under different colored lights.\n  B. Measuring the temperature of water before and after boiling it.\n  C. Testing the effect of fertilizer on plant growth by comparing two groups of plants, one receiving fertilizer and the other not.\n  D. Estimating the number of fish in a lake.\nAnswer: C\nExplanation for each answer:\n\n1. **Which is a hypothesis that can be easily tested?**\n   - **A. The Moon causes high tides.** This is a well-known phenomenon and can be tested through observations and experiments.\n   - **B. During which season are the tides the highest?"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7171605",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: Which of the following best describes the process of fossilization?\n  A. The remains of an organism are preserved without any change over time.\n  B. The remains of an organism are completely destroyed and replaced by minerals.\n  C. The remains of an organism are buried quickly, preventing decay and being replaced by minerals.\n  D. The remains of an organism are covered by sediment, but do not undergo any chemical or physical changes.\nAnswer: C\n\nQuestion: In a stratigraphic column, if a particular rock layer is found above another layer, it indicates that the rock was formed\n  A. later than the lower layer.\n  B. earlier than the lower layer.\n  C. at the same time as the"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7139878",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: A scientist is studying the effects of different types of pollution on a local river. She measures the pH level of the water before and after adding pollutants. The pH level decreases significantly. What type of pollution is most likely responsible for this change?\n  A. acid rain\n  B. oil spills\n  C. plastic waste\n  D. sewage\nAnswer: A\n\nQuestion: A biologist is examining the impact of deforestation on a forest ecosystem. Which abiotic factor is most likely to be affected by deforestation?\n  A. the number of trees\n  B. the temperature of the air\n  C. the amount of rainfall\n  D. the diversity of plant species\nAnswer: A\n\nQuestion: A"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7168805",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: A scientist is studying a species of fish that lives in a lake. He notices that the fish population has been declining. What could be a possible reason for this decline?\n  A. The fish are reproducing too quickly.\n  B. The fish are being overfished by humans.\n  C. The fish are migrating to a different lake.\n  D. The water temperature is becoming cooler.\nAnswer: B\n\nQuestion: A biologist is observing a group of animals in a zoo. She notes that the animals are not as active as they should be. Which of the following could be a reason for this observation?\n  A. The animals are getting enough food.\n  B. The animals are receiving proper veterinary care.\n "
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_184975",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following statements about the water cycle is true?\n  A. Water evaporates from the ground and then condenses into clouds.\n  B. Water evaporates from the ground and then condenses into rain.\n  C. Water evaporates from the ground and then condenses into lakes.\n  D. Water evaporates from the ground and then condenses into oceans.\nAnswer: B\n\nQuestion: Which of the following is an example of a symbiotic relationship?\n  A. a lion preying on a zebra\n  B. a bee collecting nectar from a flower\n  C. a shark eating a fish\n  D. a parasite infecting a host\nAnswer: B\n\nQuestion: Which of"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "MCAS_2006_9_43",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D\n\nQuestion: A 1000 kg car traveling at 20 m/s collides with a stationary 1000 kg car. After the collision, both cars move together at 5 m/s. What is the change in kinetic energy of the system?\n  A. 1000 J\n  B. 2000 J\n  C. 3000 J\n  D. 4000 J\nAnswer: D\n\nQuestion: A 2 kg object is moving at 3 m/s. What is its momentum?\n  A. 0.6 kg x m/s\n  B. 1.5 kg x m/s\n  C. 6"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_400687",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: What is the primary function of the root system in a plant?\n  A. to absorb water and nutrients from the soil\n  B. to produce flowers\n  C. to store food\n  D. to reproduce\nAnswer: A\n\nQuestion: Which of the following is not a function of leaves?\n  A. producing food through photosynthesis\n  B. absorbing sunlight\n  C. storing water\n  D. transpiring water\nAnswer: C\n\nQuestion: Which process is primarily responsible for the movement of water up a plant's stem?\n  A. diffusion\n  B. osmosis\n  C. capillary action\n  D. transpiration pull\nAnswer: D\n\nQuestion: What is"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_417147",
+      "answerKey": "B",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\n\nQuestion: Which of the following is not a major component of the atmosphere?\n  A. nitrogen\n  B. oxygen\n  C. helium\n  D. carbon dioxide\nAnswer: C\n\nQuestion: What is the primary source of energy for the water cycle?\n  A. solar radiation\n  B. gravitational pull\n  C. wind\n  D. tides\nAnswer: A\n\nQuestion: Which of the following is not a type of precipitation?\n  A. rain\n  B. snow\n  C. fog\n  D. sleet\nAnswer: C\n\nQuestion: What is the main reason why the salinity of ocean water remains relatively constant despite the addition of fresh water from rivers?\n  A."
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    },
+    {
+      "id": "Mercury_7016765",
+      "answerKey": "A",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\n\nQuestion: Which of the following is not a type of weather?\n  A. snow\n  B. wind\n  C. earthquake\n  D. fog\nAnswer: C\n\nQuestion: Which of the following is an example of a natural disaster?\n  A. a volcanic eruption\n  B. a forest fire\n  C. a mudslide\n  D. all of the above\nAnswer: D\n\nQuestion: Which of the following is a result of erosion?\n  A. a river flowing through a valley\n  B. a mountain being formed\n  C. a tree growing taller\n  D. a lake being filled with sediment\nAnswer: D\n\nQuestion: Which of the following is a characteristic of a desert"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "few_shot"
+    }
+  ]
+}

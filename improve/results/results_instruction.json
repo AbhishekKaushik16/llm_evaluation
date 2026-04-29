@@ -1,0 +1,1317 @@
+{
+  "strategy": "instruction",
+  "accuracy": {
+    "accuracy": 0.79,
+    "accuracy_pct": 79.0,
+    "ci_low": 71.0,
+    "ci_high": 87.0,
+    "n": 100,
+    "n_correct": 79
+  },
+  "self_consistency_k": 1,
+  "temperature": 0.0,
+  "seed": 42,
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "results": [
+    {
+      "id": "ACTAAP_2009_7_8",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7168805",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7218820",
+      "answerKey": "B",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_184975",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_402120",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2003_8_11",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_417147",
+      "answerKey": "B",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2006_9_43",
+      "answerKey": "C",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7171605",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7250058",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_415303",
+      "answerKey": "A",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7252088",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_408324",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2001_8_4",
+      "answerKey": "D",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7084665",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_400687",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7215845",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_LBS10610",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2003_5_33",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "FCAT_2008_5_2",
+      "answerKey": "D",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7175875",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7136885",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_407400",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_414041",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "AKDE&ED_2008_4_19",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_400059",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7212993",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2014_8_20",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_400402",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7044328",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_413240",
+      "answerKey": "A",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7235638",
+      "answerKey": "C",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_401116",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7234308",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MEA_2010_8_1",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7186358",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MDSA_2009_5_20",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7064680",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "ACTAAP_2014_5_8",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_414099",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7166425",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_178325",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7211680",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_410807",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7086660",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7212678",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MDSA_2007_8_3",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_180373",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7116288",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_403234",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7094290",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "TAKS_2009_8_32",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7216248",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2004_9_15-v1",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7011323",
+      "answerKey": "A",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7186568",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7068513",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\nThe correct answer is A. Converging boundaries, also known as subduction zones, are where one tectonic plate moves beneath another, often leading to volcanic activity as magma rises to fill the gap created by the subducting plate. The formation of Mount St. Helens occurred in a subduction zone along the Pacific Ring of Fire."
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_417677",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "AKDE&ED_2008_4_26",
+      "answerKey": "C",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\nThe relationship in option B, \"Water carries a rock downstream,\" involves a nonliving thing (water) transporting a nonliving object (rock). This is a physical interaction without direct biological involvement, making it the best example among the given options. The other examples involve living things interacting with each other or with nonliving things in ways that include biological processes."
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_409171",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_26",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "AKDE&ED_2008_4_25",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\nThe correct answer is A because air is indeed a mixture of various gases such as nitrogen, oxygen, argon, and others. Ice, on the other hand, is a solid form of water, not a mixture of gases. Therefore, options B, C, and D are incorrect. The properties of a substance like air being a mixture of gases align with the given statement in option A. Answer: A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7109463",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_402216",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_400440",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_401620",
+      "answerKey": "A",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_401277",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_404894",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_416529",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7012740",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\nThe Sun primarily influences wave formation through its heating effects, which can cause water to move and create waves. While it does affect other aspects like temperature and salinity, creating water particles or providing minerals is not directly related to the Sun's influence on ocean dynamics. Organisms coming to the surface due to sunlight is a secondary effect of the Sun's warming influence. Thus, the most accurate description among the given options is that the Sun influences the formation of waves. Answer: A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_408547",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_400877",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2005_5_25",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2006_8_1",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2002_8_11",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_407327",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7174213",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_401272",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_405086",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_400578",
+      "answerKey": "A",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\nThe correct answer is B because a mouse running from a coyote is an example of an innate, or instinctive, response rather than a learned behavior. Learned behaviors are those that develop through experience and observation, such as a human learning to tie their shoes or a dog responding to commands. Options A, C, and D all describe behaviors that are typically learned or developed over time in animals. However, the mouse's reaction to a coyote is a reflex based on survival instincts, not a learned behavior."
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "TIMSS_2003_8_pg80",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2006_9_44",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_34",
+      "answerKey": "2",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7103600",
+      "answerKey": "D",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7210245",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_416645",
+      "answerKey": "D",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7270393",
+      "answerKey": "B",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7212398",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MDSA_2009_8_2",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_409139",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_406777",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "MCAS_2014_5_7",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_SC_401290",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7127943",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_412202",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_LBS11018",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A"
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7139878",
+      "answerKey": "C",
+      "predicted": "D",
+      "raw_outputs": [
+        " D"
+      ],
+      "all_answers": [
+        "D"
+      ],
+      "correct": false,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_400407",
+      "answerKey": "B",
+      "predicted": "B",
+      "raw_outputs": [
+        " B\nThe Sun is located at the center of our solar system, and the planets orbit around it. The inner planets (Mercury, Venus, Earth, Mars) are terrestrial or \"solid\" planets, while the outer planets (Jupiter, Saturn, Uranus, Neptune) are gas giants. These gas giants are indeed closer to the Sun compared to the terrestrial planets. Therefore, option B is the correct statement. Answer: B"
+      ],
+      "all_answers": [
+        "B"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_7016765",
+      "answerKey": "A",
+      "predicted": "A",
+      "raw_outputs": [
+        " A\nThe primary cause of rainstorms is not directly related to how Earth is heated by the Sun, but rather the atmospheric conditions that lead to precipitation. While the heating of Earth by the Sun does play a role in creating atmospheric circulation patterns, which can lead to rainstorms, it is not the primary cause itself. The other options (mountains directing moist air upward, water forming droplets when cooled, and most of Earth being covered with water) are not the main drivers of rainstorms. Answer A is the closest to the actual primary cause, though it's important to note that multiple factors contribute to rainstorm formation. However, based on the given options, A is the best choice."
+      ],
+      "all_answers": [
+        "A"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    },
+    {
+      "id": "Mercury_412681",
+      "answerKey": "C",
+      "predicted": "C",
+      "raw_outputs": [
+        " C\nThe gravitational force \\( F \\) between two masses \\( m_1 \\) and \\( m_2 \\) separated by a distance \\( r \\) is given by Newton's law of universal gravitation:\n\n\\[ F = G \\frac{m_1 m_2}{r^2} \\]\n\nwhere \\( G \\) is the gravitational constant.\n\nTo determine which action increases the gravitational force by the greatest amount, we need to analyze how each option affects the formula:\n\n- **Option A**: Halve the mass of \\( m_1 \\) and halve the distance between \\( m_1 \\) and \\( m_2 \\).\n  - New force: \\( F' = G \\frac{(0.5 m"
+      ],
+      "all_answers": [
+        "C"
+      ],
+      "correct": true,
+      "strategy": "instruction"
+    }
+  ]
+}

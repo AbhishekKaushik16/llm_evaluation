@@ -1,0 +1,25 @@
+{
+  "results": {
+    "custom_commonsense": {
+      "acc,none": 1.0,
+      "acc_norm,none": 1.0,
+      "n_samples": 50,
+      "n_correct": 50,
+      "n_parseable": 50,
+      "n_errors": 0,
+      "elapsed_seconds": 21.066680192947388
+    }
+  },
+  "versions": {
+    "custom_commonsense": "gen-1.0"
+  },
+  "n-shot": {
+    "custom_commonsense": 0
+  },
+  "timestamp": "20260429_191007",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "tasks": [
+    "custom_commonsense"
+  ],
+  "failed_tasks": []
+}

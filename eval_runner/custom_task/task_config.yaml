@@ -1,0 +1,28 @@
+task: custom_commonsense
+dataset_path: json
+dataset_kwargs:
+  data_files:
+    test: data.jsonl
+  data_dir: eval_runner/custom_task
+dataset_name: null
+output_type: multiple_choice
+training_split: null
+validation_split: null
+test_split: test
+doc_to_text: "Question: {{question}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\nD. {{choices[3]}}\nAnswer:"
+doc_to_choice:
+  - "A"
+  - "B"
+  - "C"
+  - "D"
+doc_to_target: "{{answer}}"
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0
+  description: "Custom commonsense reasoning benchmark with 50 multiple-choice science questions."

@@ -1,0 +1,14 @@
+Model: Qwen/Qwen2.5-3B-Instruct
+Date: 20260429_191558
+Tasks: mmlu, hellaswag, custom_commonsense
+Failed: mmlu, hellaswag
+
+Task                           Metric                    Value     Stderr
+------------------------------------------------------------------------
+custom_commonsense             acc                      1.0000        N/A
+custom_commonsense             acc_norm                 1.0000        N/A
+custom_commonsense             elapsed_seconds         21.0667        N/A
+custom_commonsense             n_correct                    50        N/A
+custom_commonsense             n_errors                      0        N/A
+custom_commonsense             n_parseable                  50        N/A
+custom_commonsense             n_samples                    50        N/A

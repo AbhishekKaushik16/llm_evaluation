@@ -1,0 +1,33 @@
+# Pin strategy:
+#   - vllm-metal pinned exactly: the logprobs bug documented in README is specific to 0.2.0;
+#     unpinning it would silently change behaviour for anyone reproducing this run.
+#   - vllm pinned to the version that ships with vllm-metal 0.2.0 (also the CPU fallback target).
+#   - everything else pinned with `>=tested-version, <next-major` for a stable reproduction
+#     while leaving room for security patches.
+#
+# Tested with: macOS 25.1 / Apple Silicon, Python 3.12, vllm-metal install bundle.
+
+vllm-metal==0.2.0
+vllm==0.20.0
+
+lm-eval>=0.4.11,<0.5
+
+# OpenAI-compatible client + async HTTP
+openai>=2.33.0,<3
+aiohttp>=3.13,<4
+
+# Numerics + analysis
+numpy>=2.3,<3
+pandas>=3.0,<4
+scipy>=1.17,<2
+matplotlib>=3.10,<4
+seaborn>=0.13,<1
+
+# Datasets + retrieval
+datasets>=4.8,<5
+sentence-transformers>=5.4,<6
+faiss-cpu>=1.13,<2
+
+# Notebook + UX
+jupyter>=1.1,<2
+tqdm>=4.67,<5

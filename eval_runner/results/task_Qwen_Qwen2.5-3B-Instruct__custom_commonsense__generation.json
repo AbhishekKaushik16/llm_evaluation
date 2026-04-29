@@ -1,0 +1,26 @@
+{
+  "task": "custom_commonsense",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "timestamp": "20260429_204043",
+  "results": {
+    "custom_commonsense": {
+      "acc,none": 1.0,
+      "acc_norm,none": 1.0,
+      "n_samples": 50,
+      "n_correct": 50,
+      "n_parseable": 50,
+      "n_errors": 0,
+      "elapsed_seconds": 19.23491096496582
+    }
+  },
+  "versions": {
+    "custom_commonsense": "gen-1.0"
+  },
+  "n-shot": {
+    "custom_commonsense": 0
+  },
+  "config": {
+    "strategy": "generation",
+    "scoring": "exact-match-letter"
+  }
+}
